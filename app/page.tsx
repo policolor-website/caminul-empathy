@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icons";
+import ImageCarousel from "@/components/ImageCarousel";
 import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -120,6 +121,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── PRICING ─── */}
+      <section className="py-8 md:py-12">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <Reveal>
+              <div data-glow className="relative overflow-hidden rounded-[2rem] bg-pine-deep p-8 md:p-10 text-cream shadow-2xl">
+                <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-honey/20 blur-2xl" />
+                <div className="text-[13px] font-semibold uppercase tracking-[0.16em] text-honey">
+                  Tarife 2026
+                </div>
+                <div className="mt-4 font-display text-4xl md:text-5xl font-semibold">
+                  {SITE.priceMin}–{SITE.priceMax}
+                  <span className="text-2xl"> lei</span>
+                  <span className="text-lg font-normal text-cream/70">/lună</span>
+                </div>
+                <p className="mt-4 text-cream/80 leading-relaxed">
+                  Tarif personalizat în funcție de gradul de dependență și serviciile
+                  necesare. Evaluare gratuită, contract transparent, zero costuri ascunse.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link href="/tarife" className="rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep transition-colors hover:bg-cream">
+                    Detalii tarife
+                  </Link>
+                  <a href={SITE.phoneHref} className="rounded-full border-2 border-cream/40 px-6 py-3 font-semibold text-cream transition-colors hover:bg-cream hover:text-pine-deep">
+                    Cere o estimare
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+            <div>
+              <SectionHeading
+                align="left"
+                eyebrow="Inclus în tarif"
+                title="Un tarif clar, cu totul inclus"
+              />
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {INCLUDED.slice(8).map((item, i) => (
+                  <Reveal key={item} delay={i * 40}>
+                    <div data-glow className="flex items-center gap-3 rounded-xl bg-pine-mist/60 px-4 py-3">
+                      <Icon name="check" className="h-4 w-4 shrink-0 text-pine" />
+                      <span className="text-[15px] font-medium">{item}</span>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── BENEFITS ─── */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -147,6 +198,18 @@ export default function HomePage() {
             </a>
           </Reveal>
         </div>
+      </section>
+
+      {/* ─── IMAGE CAROUSEL ─── */}
+      <section className="pb-16 md:pb-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-8 text-center">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
+              Din căminele noastre
+            </span>
+          </Reveal>
+        </div>
+        <ImageCarousel />
       </section>
 
       {/* ─── ABOUT ─── */}
@@ -293,54 +356,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── PRICING ─── */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <Reveal>
-              <div data-glow className="relative overflow-hidden rounded-[2rem] bg-pine-deep p-8 md:p-10 text-cream shadow-2xl">
-                <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-honey/20 blur-2xl" />
-                <div className="text-[13px] font-semibold uppercase tracking-[0.16em] text-honey">
-                  Tarife 2026
-                </div>
-                <div className="mt-4 font-display text-4xl md:text-5xl font-semibold">
-                  {SITE.priceMin}–{SITE.priceMax}
-                  <span className="text-2xl"> lei</span>
-                  <span className="text-lg font-normal text-cream/70">/lună</span>
-                </div>
-                <p className="mt-4 text-cream/80 leading-relaxed">
-                  Tarif personalizat în funcție de gradul de dependență și serviciile
-                  necesare. Evaluare gratuită, contract transparent, zero costuri ascunse.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link href="/tarife" className="rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep transition-colors hover:bg-cream">
-                    Detalii tarife
-                  </Link>
-                  <a href={SITE.phoneHref} className="rounded-full border-2 border-cream/40 px-6 py-3 font-semibold text-cream transition-colors hover:bg-cream hover:text-pine-deep">
-                    Cere o estimare
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-            <div>
-              <SectionHeading
-                align="left"
-                eyebrow="Inclus în tarif"
-                title="Un tarif clar, cu totul inclus"
-              />
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {INCLUDED.slice(8).map((item, i) => (
-                  <Reveal key={item} delay={i * 40}>
-                    <div data-glow className="flex items-center gap-3 rounded-xl bg-pine-mist/60 px-4 py-3">
-                      <Icon name="check" className="h-4 w-4 shrink-0 text-pine" />
-                      <span className="text-[15px] font-medium">{item}</span>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </div>
+      {/* ─── LOCATION CAROUSEL ─── */}
+      <section className="bg-cream py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-8 text-center">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
+              Spații și momente din fiecare centru
+            </span>
+          </Reveal>
         </div>
+        <ImageCarousel seed={7} duration={70} reverse />
       </section>
 
       {/* ─── STEPS ─── */}

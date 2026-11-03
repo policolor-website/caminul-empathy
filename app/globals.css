@@ -49,6 +49,10 @@ body {
   animation-play-state: paused;
 }
 
+.marquee-track--reverse {
+  animation-direction: reverse;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;
