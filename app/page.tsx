@@ -126,7 +126,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal>
-              <div data-glow className="relative overflow-hidden rounded-[2rem] bg-pine-deep p-8 md:p-10 text-cream shadow-2xl">
+              <div data-glow data-tilt className="relative overflow-hidden rounded-[2rem] bg-pine-deep p-8 md:p-10 text-cream shadow-2xl">
                 <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-honey/20 blur-2xl" />
                 <div className="text-[13px] font-semibold uppercase tracking-[0.16em] text-honey">
                   Tarife 2026
@@ -169,47 +169,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* ─── BENEFITS ─── */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Ce e bine să știți"
-            title="Tot ce primește rezidentul, într-un singur tarif"
-            lead="Fără costuri ascunse: cazare, masă, îngrijire medicală și activități — toate incluse în tariful lunar."
-          />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {INCLUDED.slice(0, 8).map((item, i) => (
-              <Reveal key={item} delay={(i % 4) * 60}>
-                <div data-glow className="group flex items-start gap-3 rounded-2xl border border-sand bg-white p-5 transition-all hover:border-pine/40 hover:shadow-md">
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pine-mist text-pine transition-colors group-hover:bg-pine group-hover:text-white">
-                    <Icon name="check" className="h-4 w-4" />
-                  </span>
-                  <span className="font-medium text-ink">{item}</span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={200} className="mt-8 text-center">
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 text-lg font-semibold text-clay hover:text-clay-deep">
-              <Icon name="phone" className="h-5 w-5" />
-              Întrebări? {SITE.phone}
-            </a>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── IMAGE CAROUSEL ─── */}
-      <section className="pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-8 text-center">
-          <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
-              Din căminele noastre
-            </span>
-          </Reveal>
-        </div>
-        <ImageCarousel />
       </section>
 
       {/* ─── ABOUT ─── */}
@@ -276,6 +235,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── BENEFITS ─── */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Ce e bine să știți"
+            title="Tot ce primește rezidentul, într-un singur tarif"
+            lead="Fără costuri ascunse: cazare, masă, îngrijire medicală și activități — toate incluse în tariful lunar."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {INCLUDED.slice(0, 8).map((item, i) => (
+              <Reveal key={item} delay={(i % 4) * 60}>
+                <div data-glow className="group flex items-start gap-3 rounded-2xl border border-sand bg-white p-5 transition-all hover:border-pine/40 hover:shadow-md">
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pine-mist text-pine transition-colors group-hover:bg-pine group-hover:text-white">
+                    <Icon name="check" className="h-4 w-4" />
+                  </span>
+                  <span className="font-medium text-ink">{item}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={200} className="mt-8 text-center">
+            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 text-lg font-semibold text-clay hover:text-clay-deep">
+              <Icon name="phone" className="h-5 w-5" />
+              Întrebări? {SITE.phone}
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── IMAGE CAROUSEL ─── */}
+      <section className="pb-16 md:pb-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pb-8 text-center">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
+              Din căminele noastre
+            </span>
+          </Reveal>
+        </div>
+        <ImageCarousel />
+      </section>
+
       {/* ─── SERVICES ─── */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -290,6 +290,7 @@ export default function HomePage() {
                 <Link
                   href="/servicii"
                   data-glow
+                  data-tilt
                   className="group flex h-full flex-col rounded-3xl border border-sand bg-white p-6 transition-all hover:-translate-y-1 hover:border-pine/40 hover:shadow-lg"
                 >
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-mist text-pine transition-colors group-hover:bg-pine group-hover:text-white">
@@ -321,7 +322,7 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {LOCATIONS.map((l, i) => (
               <Reveal key={l.slug} delay={i * 100}>
-                <article data-glow className="group flex h-full flex-col overflow-hidden rounded-3xl bg-cream shadow-xl">
+                <article data-glow data-tilt className="group flex h-full flex-col overflow-hidden rounded-3xl bg-cream shadow-xl">
                   <div className="relative h-52 overflow-hidden">
                     <Image
                       src={l.image}
@@ -464,7 +465,7 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {REVIEWS.map((r, i) => (
               <Reveal key={r.place} delay={i * 100}>
-                <figure data-glow className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-sm border border-sand">
+                <figure data-glow data-tilt className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-sm border border-sand">
                   <div className="flex gap-1 text-honey" aria-label="5 din 5 stele">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Icon key={j} name="star" className="h-4 w-4 fill-current" />

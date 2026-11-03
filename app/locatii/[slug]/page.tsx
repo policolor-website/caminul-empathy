@@ -78,7 +78,7 @@ export default async function LocationPage({
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {loc.facts.map((f, i) => (
                   <Reveal key={f.title} delay={(i % 2) * 70}>
-                    <div data-glow className="h-full rounded-2xl border border-sand bg-white p-6">
+                    <div data-glow data-tilt className="h-full rounded-2xl border border-sand bg-white p-6">
                       <h3 className="font-display text-lg font-semibold text-pine-deep">{f.title}</h3>
                       <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">{f.text}</p>
                     </div>

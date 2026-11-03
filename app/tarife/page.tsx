@@ -39,7 +39,7 @@ export default function TarifePage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <Reveal>
-              <div data-glow className="rounded-[2rem] border-2 border-pine/30 bg-white p-8 md:p-10 shadow-lg">
+              <div data-glow data-tilt className="rounded-[2rem] border-2 border-pine/30 bg-white p-8 md:p-10 shadow-lg">
                 <div className="text-[13px] font-semibold uppercase tracking-[0.16em] text-clay">
                   Tarif lunar
                 </div>
@@ -84,7 +84,7 @@ export default function TarifePage() {
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {FACTORS.map((f, i) => (
                   <Reveal key={f.t} delay={i * 80}>
-                    <div data-glow className="h-full rounded-2xl border border-sand bg-white p-6">
+                    <div data-glow data-tilt className="h-full rounded-2xl border border-sand bg-white p-6">
                       <h3 className="font-display text-lg font-semibold text-pine-deep">{f.t}</h3>
                       <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">{f.d}</p>
                     </div>

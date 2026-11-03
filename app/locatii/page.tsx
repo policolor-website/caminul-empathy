@@ -33,7 +33,7 @@ export default function LocatiiPage() {
           <div className="grid gap-8 md:grid-cols-3">
             {LOCATIONS.map((l, i) => (
               <Reveal key={l.slug} delay={i * 100}>
-                <article data-glow className="group flex h-full flex-col overflow-hidden rounded-3xl border border-sand bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+                <article data-glow data-tilt className="group flex h-full flex-col overflow-hidden rounded-3xl border border-sand bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
                   <div className="relative h-56 overflow-hidden">
                     <Image
                       src={l.image}

@@ -18,6 +18,7 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (el.querySelector("[data-glow]")) el.classList.add("reveal--flip");
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.classList.add("is-in");
       return;
