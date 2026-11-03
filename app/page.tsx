@@ -487,37 +487,72 @@ export default function HomePage() {
 
       {/* ─── FAQ ─── */}
       <section id="faq" className="scroll-mt-20 py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Întrebări frecvente"
             title="Ce ne întreabă familiile înainte de internare"
           />
-          <div className="mt-10 space-y-3">
-            {FAQS.map((f, i) => (
-              <Reveal key={f.q} delay={i * 40}>
-                <details data-glow className="faq-item group rounded-2xl border border-sand bg-white px-6 py-4 open:shadow-sm">
-                  <summary className="flex items-center justify-between gap-4 py-1">
-                    <span className="font-semibold text-pine-deep">{f.q}</span>
-                    <span className="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pine-mist text-pine">
-                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>
-                        <path d="M12 5v14M5 12h14" strokeLinecap="round" />
-                      </svg>
+          <div className="mt-12 grid gap-8 lg:grid-cols-[380px_1fr]">
+            {/* Left help card */}
+            <Reveal>
+              <aside className="h-fit lg:sticky lg:top-28 rounded-3xl bg-pine-deep p-8 text-cream">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-honey text-pine-deep">
+                  <Icon name="phone" className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 font-display text-2xl font-semibold">Nu ați găsit răspunsul?</h3>
+                <p className="mt-3 leading-relaxed text-cream/75">
+                  Povestiți-ne pe scurt despre situația părintelui — vă răspundem la orice
+                  întrebare și vă spunem sincer dacă Empathy este soluția potrivită.
+                </p>
+                <div className="mt-6 space-y-3">
+                  <a href={SITE.phoneHref} className="flex items-center gap-3 rounded-xl bg-cream/10 px-4 py-3 transition-colors hover:bg-cream/20">
+                    <Icon name="phone" className="h-5 w-5 shrink-0 text-honey" />
+                    <span>
+                      <span className="block font-semibold">{SITE.phone}</span>
+                      <span className="block text-xs text-cream/60">{SITE.phoneName}</span>
                     </span>
-                  </summary>
-                  <p className="mt-3 pb-2 leading-relaxed text-ink-soft">{f.a}</p>
-                </details>
-              </Reveal>
-            ))}
+                  </a>
+                  <a href={SITE.phone2Href} className="flex items-center gap-3 rounded-xl bg-cream/10 px-4 py-3 transition-colors hover:bg-cream/20">
+                    <Icon name="phone" className="h-5 w-5 shrink-0 text-honey" />
+                    <span>
+                      <span className="block font-semibold">{SITE.phone2}</span>
+                      <span className="block text-xs text-cream/60">{SITE.phone2Name}</span>
+                    </span>
+                  </a>
+                  <a href={SITE.whatsapp} target="_blank" rel="noopener" className="flex items-center gap-3 rounded-xl bg-cream/10 px-4 py-3 transition-colors hover:bg-cream/20">
+                    <Icon name="users" className="h-5 w-5 shrink-0 text-honey" />
+                    <span className="font-semibold">WhatsApp</span>
+                  </a>
+                </div>
+                <div className="mt-6 flex items-start gap-3 rounded-xl border border-cream/15 p-4 text-sm text-cream/70">
+                  <Icon name="clock" className="mt-0.5 h-4 w-4 shrink-0 text-honey" />
+                  <span>
+                    Vizite zilnice, fără programare.<br />
+                    Domnești 10–13 &amp; 14–18 · Clinceni 08–22.
+                  </span>
+                </div>
+              </aside>
+            </Reveal>
+
+            {/* Accordion */}
+            <div className="space-y-3">
+              {FAQS.map((f, i) => (
+                <Reveal key={f.q} delay={i * 40}>
+                  <details data-glow className="faq-item group rounded-2xl border border-sand bg-white px-6 py-4 open:shadow-sm">
+                    <summary className="flex items-center justify-between gap-4 py-1">
+                      <span className="font-semibold text-pine-deep">{f.q}</span>
+                      <span className="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pine-mist text-pine">
+                        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>
+                          <path d="M12 5v14M5 12h14" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <p className="mt-3 pb-2 leading-relaxed text-ink-soft">{f.a}</p>
+                  </details>
+                </Reveal>
+              ))}
+            </div>
           </div>
-          <Reveal delay={200} className="mt-10 flex flex-wrap items-center justify-center gap-4 rounded-2xl bg-pine-mist p-6">
-            <span className="font-medium text-pine-deep">Nu ați găsit răspunsul?</span>
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 font-semibold text-clay hover:text-clay-deep">
-              <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
-            </a>
-            <a href={SITE.whatsapp} target="_blank" rel="noopener" className="font-semibold text-pine hover:text-pine-deep">
-              WhatsApp
-            </a>
-          </Reveal>
         </div>
       </section>
 
