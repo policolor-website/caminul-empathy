@@ -28,8 +28,8 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={80}>
                 <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-pine-deep">
-                  Un cămin care se simte{" "}
-                  <em className="not-italic text-clay">ca acasă</em>
+                  Locul unde vârsta{" "}
+                  <em className="not-italic text-clay">se trăiește frumos</em>
                 </h1>
               </Reveal>
               <Reveal delay={160}>
@@ -236,7 +236,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── BENEFITS ─── */}
-      <section className="py-16 md:py-24">
+      <section className="pb-16 md:pb-24 pt-3 md:pt-6">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Ce e bine să știți"
