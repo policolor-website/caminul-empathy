@@ -43,7 +43,7 @@ export default function HomePage() {
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 text-[16px] font-semibold text-pine-deep shadow-md transition-all hover:bg-clay-deep hover:shadow-lg"
+                    className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 text-[16px] font-semibold text-pine-deep shadow-md transition-all hover:bg-clay-deep hover:text-cream hover:shadow-lg"
                   >
                     <Icon name="calendar" className="h-5 w-5" />
                     Programează o vizită gratuită
@@ -76,7 +76,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="relative aspect-[4/3.2] overflow-hidden rounded-[2.5rem] rounded-tr-[6rem] shadow-2xl">
                   <Image
-                    src="/img/camin-empathy.jpg"
+                    src="/img/camin-empathy.webp"
                     alt="Căminul Empathy — îngrijire cu empatie pentru seniori"
                     fill
                     sizes="(min-width:1024px) 45vw, 100vw"
@@ -179,7 +179,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="overflow-hidden rounded-[2rem] shadow-xl">
                   <Image
-                    src="/img/domnesti.jpg"
+                    src="/img/domnesti.webp"
                     alt="Căminul Empathy din Domnești, Ilfov"
                     width={800}
                     height={560}
@@ -391,7 +391,7 @@ export default function HomePage() {
             ))}
           </div>
           <Reveal delay={300} className="mt-12 flex flex-wrap justify-center gap-4">
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep transition-colors hover:bg-clay-deep">
+            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep transition-colors hover:bg-clay-deep hover:text-cream">
               <Icon name="phone" className="h-5 w-5" />
               Sună acum: {SITE.phone}
             </a>

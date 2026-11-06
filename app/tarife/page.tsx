@@ -66,7 +66,7 @@ export default function TarifePage() {
                   ))}
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep hover:bg-clay-deep">
+                  <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
                     <Icon name="phone" className="h-4 w-4" /> {SITE.phone}
                   </a>
                   <Link href="/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-6 py-3 font-semibold text-pine hover:bg-pine hover:text-white">
@@ -128,7 +128,7 @@ export default function TarifePage() {
               Evaluarea medicală este gratuită și fără obligații. Răspundem în maximum 24 de ore.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep">
+              <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
                 <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
               </a>
               <a href={SITE.phone2Href} className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-8 py-4 font-semibold text-pine hover:bg-pine hover:text-white">

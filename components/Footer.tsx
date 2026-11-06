@@ -11,7 +11,9 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/img/logo.png"
+                src="/img/logo.webp"
+                width="44"
+                height="44"
                 alt="Căminul Empathy"
                 className="h-11 w-11 rounded-xl bg-cream/10 object-contain"
               />

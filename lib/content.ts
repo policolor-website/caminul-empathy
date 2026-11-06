@@ -80,7 +80,7 @@ export const LOCATIONS = [
     short: "Cetinei",
     badge: "Mediu natural liniștit",
     address: "Str. Cetinei nr. 4, Domnești, Ilfov",
-    image: "/img/cetinei.jpg",
+    image: "/img/cetinei.webp",
     blurb:
       "Îngrijire medicală profesională 24/7 într-un cadru liniștit, cu terasă în aer liber. Facilități moderne, personal dedicat și acces rapid din București.",
     highlights: [
@@ -105,7 +105,7 @@ export const LOCATIONS = [
     short: "Orhideelor",
     badge: "Curte și grădină amenajată",
     address: "Str. Orhideelor nr. 4, Domnești, Ilfov",
-    image: "/img/g9.jpg",
+    image: "/img/g9.webp",
     blurb:
       "Îngrijire medicală profesională 24/7 într-o curte spațioasă cu grădină amenajată. Facilități moderne, personal dedicat și acces rapid din București.",
     highlights: [
@@ -130,7 +130,7 @@ export const LOCATIONS = [
     short: "Clinceni",
     badge: "Cea mai nouă locație",
     address: "Șos. Clinceni nr. 71, Bragadiru, Ilfov",
-    image: "/img/clinceni.jpg",
+    image: "/img/clinceni.webp",
     blurb:
       "Cea mai nouă și modernă locație Empathy — complet renovată în 2024. Facilități premium, grădină amenajată și acces rapid din zona de sud a Bucureștiului.",
     highlights: [
@@ -357,20 +357,20 @@ export const STATS = [
 ];
 
 export const GALLERY = [
-  { src: "/img/g1.jpg", alt: "Rezidenți la activități în căminul Empathy" },
-  { src: "/img/g2.jpg", alt: "Interior cămin Empathy — zonă de zi" },
-  { src: "/img/g3.jpg", alt: "Cameră în căminul Empathy" },
-  { src: "/img/g4.jpg", alt: "Activități recreative cu rezidenții" },
-  { src: "/img/g5.jpg", alt: "Spații verzi și grădină Empathy" },
-  { src: "/img/g6.jpg", alt: "Rezidenți la masă în cămin" },
-  { src: "/img/g7.jpg", alt: "Moment de socializare în grădină" },
-  { src: "/img/g8.jpg", alt: "Interior luminos în cămin" },
-  { src: "/img/g9.jpg", alt: "Terasa căminului Empathy" },
-  { src: "/img/g10.jpg", alt: "Activitate în aer liber" },
-  { src: "/img/g11.jpg", alt: "Ziua unui rezident la Empathy" },
-  { src: "/img/g12.jpg", alt: "Îngrijire cu empatie, zi de zi" },
-  { src: "/img/g13.jpg", alt: "Spațiu comun în cămin" },
-  { src: "/img/g14.jpg", alt: "Rezidenți și echipă Empathy" },
-  { src: "/img/g15.jpg", alt: "Cameră cu lumină naturală" },
-  { src: "/img/g16.jpg", alt: "Exteriorul căminului" },
+  { src: "/img/g1.webp", alt: "Rezidenți la activități în căminul Empathy" },
+  { src: "/img/g2.webp", alt: "Interior cămin Empathy — zonă de zi" },
+  { src: "/img/g3.webp", alt: "Cameră în căminul Empathy" },
+  { src: "/img/g4.webp", alt: "Activități recreative cu rezidenții" },
+  { src: "/img/g5.webp", alt: "Spații verzi și grădină Empathy" },
+  { src: "/img/g6.webp", alt: "Rezidenți la masă în cămin" },
+  { src: "/img/g7.webp", alt: "Moment de socializare în grădină" },
+  { src: "/img/g8.webp", alt: "Interior luminos în cămin" },
+  { src: "/img/g9.webp", alt: "Terasa căminului Empathy" },
+  { src: "/img/g10.webp", alt: "Activitate în aer liber" },
+  { src: "/img/g11.webp", alt: "Ziua unui rezident la Empathy" },
+  { src: "/img/g12.webp", alt: "Îngrijire cu empatie, zi de zi" },
+  { src: "/img/g13.webp", alt: "Spațiu comun în cămin" },
+  { src: "/img/g14.webp", alt: "Rezidenți și echipă Empathy" },
+  { src: "/img/g15.webp", alt: "Cameră cu lumină naturală" },
+  { src: "/img/g16.webp", alt: "Exteriorul căminului" },
 ];

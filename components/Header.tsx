@@ -134,7 +134,9 @@ export default function Header() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/img/logo.png"
+              src="/img/logo.webp"
+              width="112"
+              height="112"
               alt="Căminul Empathy"
               className={`object-contain transition-all duration-300 ${
                 compact ? "h-10 w-10 lg:h-12 lg:w-12" : "h-14 w-14 lg:h-28 lg:w-28"
@@ -181,7 +183,7 @@ export default function Header() {
                         aria-expanded={open}
                         aria-label={`Submeniu ${item.label}`}
                         onClick={() => setDropOpen(open ? null : item.label)}
-                        className="pr-3 py-2"
+                        className="flex h-11 w-11 items-center justify-center pr-2"
                       >
                         <Chevron open={open} />
                       </button>
