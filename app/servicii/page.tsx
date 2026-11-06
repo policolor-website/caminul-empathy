@@ -59,7 +59,7 @@ export default function ServiciiPage() {
                     <div>
                       <h2 className="font-display text-xl font-semibold text-pine-deep">{s.title}</h2>
                       <p className="mt-2 leading-relaxed text-ink-soft">{s.text}</p>
-                      <p className="mt-3 text-[15px] leading-relaxed text-ink-soft/90">
+                      <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">
                         {DETAILS[s.slug]}
                       </p>
                     </div>

@@ -105,7 +105,7 @@ export default async function LocationPage({
                     Program de vizită
                   </h3>
                   <p className="mt-2 text-ink-soft">{loc.visitHours} — fără programare.</p>
-                  <p className="mt-1 text-sm text-ink-soft/80">
+                  <p className="mt-1 text-sm text-ink-soft">
                     Încurajăm vizitele familiei: contribuie direct la bunăstarea rezidenților.
                   </p>
                 </div>
