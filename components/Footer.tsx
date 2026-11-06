@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-[15px] leading-relaxed text-cream/70">
-              {SITE.tagline}. Trei cămine în Ilfov, la 15–20 de minute de București, din {SITE.since}.
+              {SITE.tagline}. Patru cămine în Ilfov, la 15–20 de minute de București, din {SITE.since}.
             </p>
           </div>
 

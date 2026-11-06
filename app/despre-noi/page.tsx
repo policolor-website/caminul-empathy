@@ -9,7 +9,7 @@ import { SITE, STATS } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Despre noi",
   description:
-    "Căminele Empathy: din 2019, trei locații moderne în Ilfov pentru îngrijirea seniorilor. 100+ familii alături de noi, îngrijire medicală 24/7.",
+    "Căminele Empathy: din 2019, patru locații moderne în Ilfov pentru îngrijirea seniorilor. 100+ familii alături de noi, îngrijire medicală 24/7.",
 };
 
 const VALUES = [
@@ -23,7 +23,7 @@ const VALUES = [
 
 const REASONS = [
   "5+ ani de experiență în îngrijirea seniorilor",
-  "3 locații moderne în Ilfov cu facilități premium",
+  "4 locații moderne în Ilfov cu facilități premium",
   "Personal medical calificat disponibil 24/7",
   `Tarife transparente de la ${SITE.priceMin} lei/lună, fără costuri ascunse`,
   "Internare rapidă — răspuns în 24h, fără liste de așteptare",
@@ -41,10 +41,10 @@ export default function DespreNoiPage() {
             Din {SITE.since}
           </div>
           <h1 className="mt-5 font-display text-4xl md:text-5xl font-semibold text-cream">
-            3 locații, o singură familie
+            4 locații, o singură familie
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            Oferim îngrijire cu empatie și profesionalism pentru seniori, în trei cămine moderne din Ilfov.
+            Oferim îngrijire cu empatie și profesionalism pentru seniori, în patru cămine moderne din Ilfov.
           </p>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function DespreNoiPage() {
           </div>
           <Reveal delay={250} className="mt-10 text-center">
             <Link href="/locatii" className="inline-flex items-center gap-2 rounded-full bg-pine px-8 py-4 font-semibold text-white hover:bg-pine-deep">
-              Descoperă cele 3 locații
+              Descoperă cele 4 locații
               <Icon name="arrow" className="h-4 w-4" />
             </Link>
           </Reveal>

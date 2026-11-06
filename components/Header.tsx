@@ -128,8 +128,8 @@ export default function Header() {
         >
           <Link
             href="/"
-            className={`flex flex-col items-center gap-1 shrink-0 rounded-b-3xl border-x border-b border-cream/15 bg-pine-deep px-6 pb-3 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 ${
-              compact ? "-mt-1 pt-2" : "-mt-3 pt-4"
+            className={`flex flex-col items-center gap-1 shrink-0 rounded-b-3xl border-x border-b border-cream/15 bg-pine-deep px-4 pb-2 pt-2 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 lg:px-6 lg:pb-3 ${
+              compact ? "-mt-1 lg:-mt-1" : "-mt-2 lg:-mt-3 lg:pt-4"
             }`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -137,12 +137,12 @@ export default function Header() {
               src="/img/logo.png"
               alt="Căminul Empathy"
               className={`object-contain transition-all duration-300 ${
-                compact ? "h-12 w-12" : "h-28 w-28"
+                compact ? "h-10 w-10 lg:h-12 lg:w-12" : "h-14 w-14 lg:h-28 lg:w-28"
               }`}
             />
             <span
-              className={`block uppercase tracking-[0.22em] text-cream/70 transition-all duration-300 ${
-                compact ? "hidden" : "text-[10px]"
+              className={`uppercase tracking-[0.22em] text-cream/70 transition-all duration-300 ${
+                compact ? "hidden" : "text-[9px] lg:text-[10px]"
               }`}
             >
               Cămin de bătrâni · Ilfov
@@ -228,8 +228,9 @@ export default function Header() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-expanded={menuOpen}
               aria-label="Meniu"
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream"
+              className="lg:hidden flex h-10 items-center gap-2 rounded-full border border-cream/25 px-4 text-cream"
             >
+              <span className="text-[13px] font-semibold uppercase tracking-wider">Meniu</span>
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                 {menuOpen ? (
                   <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />

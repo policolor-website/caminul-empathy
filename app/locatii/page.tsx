@@ -8,7 +8,7 @@ import { LOCATIONS, SITE } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Locații",
   description:
-    "Cele trei cămine Empathy din Ilfov: Cetinei și Orhideelor în Domnești, plus Clinceni în Bragadiru — la 15–20 de minute de București.",
+    "Cele patru cămine Empathy din Ilfov: Cetinei, Orhideelor și Fortunei în Domnești, plus Clinceni în Bragadiru — la 15–20 de minute de București.",
 };
 
 export default function LocatiiPage() {
@@ -20,7 +20,7 @@ export default function LocatiiPage() {
             Locații
           </div>
           <h1 className="mt-5 font-display text-4xl md:text-5xl font-semibold text-cream">
-            Trei cămine în Ilfov, aproape de București
+            Patru cămine în Ilfov, aproape de București
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
             Toate în zone liniștite și verzi, la 15–20 de minute de Capitală — pentru ca familia să fie mereu aproape.
@@ -30,7 +30,7 @@ export default function LocatiiPage() {
 
       <section className="py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {LOCATIONS.map((l, i) => (
               <Reveal key={l.slug} delay={i * 100}>
                 <article data-glow data-tilt className="group flex h-full flex-col overflow-hidden rounded-3xl border border-sand bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">

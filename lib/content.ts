@@ -65,6 +65,7 @@ export const NAV: NavItem[] = [
       { href: "/locatii/cetinei", label: "Empathy Cetinei · Domnești" },
       { href: "/locatii/orhideelor", label: "Empathy Orhideelor · Domnești" },
       { href: "/locatii/clinceni", label: "Empathy Clinceni · Bragadiru" },
+      { href: "/locatii/fortunei", label: "Empathy Fortunei · Domnești" },
       { href: "/locatii", label: "Toate locațiile" },
     ],
   },
@@ -104,7 +105,7 @@ export const LOCATIONS = [
     short: "Orhideelor",
     badge: "Curte și grădină amenajată",
     address: "Str. Orhideelor nr. 4, Domnești, Ilfov",
-    image: "/img/camin-empathy.jpg",
+    image: "/img/g9.jpg",
     blurb:
       "Îngrijire medicală profesională 24/7 într-o curte spațioasă cu grădină amenajată. Facilități moderne, personal dedicat și acces rapid din București.",
     highlights: [
@@ -147,6 +148,41 @@ export const LOCATIONS = [
       { title: "Facilități premium", text: "Clădire complet renovată în 2024: camere moderne, băi adaptate, mobilier ergonomic." },
       { title: "Grădină amenajată", text: "Spații verzi întinse, alei pentru plimbări, zone de relaxare și terasă acoperită." },
       { title: "Tarife transparente", text: `Tarife de la ${SITE.priceMin} lei/lună, fără costuri ascunse.` },
+    ],
+  },
+  {
+    slug: "fortunei",
+    name: "Empathy Fortunei",
+    short: "Fortunei",
+    badge: "Al treilea centru din Domnești",
+    address: "Str. Fortunei nr. 11, Domnești, Ilfov",
+    image: "/img/fortunei-01.webp",
+    gallery: [
+      "/img/fortunei-01.webp",
+      "/img/fortunei-02.webp",
+      "/img/fortunei-03.webp",
+      "/img/fortunei-04.webp",
+      "/img/fortunei-05.webp",
+      "/img/fortunei-09.webp",
+      "/img/fortunei-10.webp",
+      "/img/fortunei-11.webp",
+    ],
+    blurb:
+      "Cel mai nou cămin Empathy din Domnești — îngrijire medicală profesională 24/7, camere confortabile și același acces rapid din București.",
+    highlights: [
+      "Acces rapid din București (15–20 minute)",
+      "Al treilea centru Empathy din Domnești",
+      "Camere confortabile cu baie proprie",
+      "Asistență medicală specializată 24/7",
+      "Program terapeutic și kineto personalizat",
+      "Tarife accesibile cu servicii complete",
+    ],
+    visitHours: "Luni–Duminică, 10:00–13:00 și 14:00–18:00",
+    facts: [
+      { title: "Locație accesibilă", text: "Pe Str. Fortunei nr. 11, în Domnești — la 15–20 de minute de București, aproape de familie." },
+      { title: "Îngrijire medicală specializată", text: "Echipă completă: medici geriatri, asistente, infirmiere și kinetoterapeuți, cu colaborări la spitale din București." },
+      { title: "Spații pentru socializare", text: "Zone pentru plimbări, activități recreative și ergoterapie, într-un mediu liniștit." },
+      { title: "Raport calitate-preț excelent", text: `Tarife de la ${SITE.priceMin} lei/lună, cu toate serviciile incluse. Fără costuri ascunse.` },
     ],
   },
 ];
@@ -315,7 +351,7 @@ export const REVIEWS = [
 
 export const STATS = [
   { value: "2019", label: "primul cămin Empathy" },
-  { value: "3", label: "locații în Ilfov" },
+  { value: "4", label: "locații în Ilfov" },
   { value: "100+", label: "familii alături de noi" },
   { value: "24/7", label: "îngrijire medicală" },
 ];

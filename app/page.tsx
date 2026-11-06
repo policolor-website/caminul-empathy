@@ -23,7 +23,7 @@ export default function HomePage() {
               <Reveal>
                 <div className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
                   <Icon name="pin" className="h-4 w-4" />
-                  3 cămine în Ilfov · din {SITE.since}
+                  4 cămine în Ilfov · din {SITE.since}
                 </div>
               </Reveal>
               <Reveal delay={80}>
@@ -52,7 +52,7 @@ export default function HomePage() {
                     href="/locatii"
                     className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-7 py-3.5 text-[16px] font-semibold text-pine transition-colors hover:bg-pine hover:text-white"
                   >
-                    Vezi cele 3 locații
+                    Vezi cele 4 locații
                     <Icon name="arrow" className="h-4 w-4" />
                   </Link>
                 </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
               <SectionHeading
                 align="left"
                 eyebrow="Despre noi"
-                title="Trei locații. Aceeași căldură."
+                title="Patru locații. Aceeași căldură."
                 lead={`Din ${SITE.since}, oferim seniorilor un mediu sigur, activ și plin de atenție — ca o familie mare. Fiecare rezident primește un plan de îngrijire adaptat nevoilor lui.`}
               />
               <div className="mt-8 space-y-4">
@@ -313,13 +313,13 @@ export default function HomePage() {
               Locații
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-[2.6rem] leading-[1.15] font-semibold text-cream">
-              Trei cămine, la 15–20 de minute de București
+              Patru cămine, la 15–20 de minute de București
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/70">
               Toate în Ilfov, toate cu același standard de îngrijire. Alegeți locația cea mai apropiată de familie.
             </p>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {LOCATIONS.map((l, i) => (
               <Reveal key={l.slug} delay={i * 100}>
                 <article data-glow data-tilt className="group flex h-full flex-col overflow-hidden rounded-3xl bg-cream shadow-xl">
@@ -462,7 +462,7 @@ export default function HomePage() {
             eyebrow="Recenzii"
             title="Ce spun familiile rezidenților"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {REVIEWS.map((r, i) => (
               <Reveal key={r.place} delay={i * 100}>
                 <figure data-glow data-tilt className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-sm border border-sand">

@@ -8,7 +8,7 @@ import { LOCATIONS, SITE } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Căminul Empathy: telefon 0786 300 500 / 0790 884 422. Trei locații în Ilfov — Domnești și Bragadiru. Vizite zilnice, fără programare.",
+    "Contact Căminul Empathy: telefon 0786 300 500 / 0790 884 422. Patru locații în Ilfov — Domnești și Bragadiru. Vizite zilnice, fără programare.",
 };
 
 export default function ContactPage() {

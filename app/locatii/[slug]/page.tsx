@@ -156,12 +156,12 @@ export default async function LocationPage({
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading eyebrow="Galerie" title={`Din căminul ${loc.short}`} />
           <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {GALLERY.slice(0, 8).map((g, i) => (
-              <Reveal key={g.src} delay={(i % 4) * 60}>
+            {(loc.gallery ?? GALLERY.map((g) => g.src)).slice(0, 8).map((src, i) => (
+              <Reveal key={src} delay={(i % 4) * 60}>
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src={g.src}
-                    alt={g.alt}
+                    src={src}
+                    alt={`${loc.name} — fotografie ${i + 1}`}
                     fill
                     sizes="(min-width:768px) 25vw, 50vw"
                     className="object-cover transition-transform duration-500 hover:scale-105"
@@ -182,7 +182,7 @@ export default async function LocationPage({
       <section className="bg-cream-deep py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading eyebrow="Alte locații" title="Mai avem două centre în Ilfov" />
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {others.map((l) => (
               <Reveal key={l.slug}>
                 <Link
