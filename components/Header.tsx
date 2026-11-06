@@ -22,16 +22,46 @@ function Chevron({ open, className = "" }: { open: boolean; className?: string }
   );
 }
 
+function Ic({ d, className = "h-4 w-4" }: { d: string; className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d={d} />
+    </svg>
+  );
+}
+
+const ICO = {
+  phone: "M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.7a2 2 0 0 1 1.7 2z",
+  mail: "M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M22 6l-10 7L2 6",
+  clock: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 7v5l3 3",
+};
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [compact, setCompact] = useState(false);
   const [dropOpen, setDropOpen] = useState<string | null>(null);
   const [accOpen, setAccOpen] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let busy = false;
+    const onScroll = () => {
+      if (busy) return;
+      busy = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        // same hysteresis as luxab: compact over 220, expand under 20
+        setCompact((c) => (y > 220 ? true : y < 20 ? false : c));
+        const el = headerRef.current;
+        if (el) {
+          const total = document.documentElement.scrollHeight - window.innerHeight;
+          el.style.setProperty("--sp", total > 0 ? Math.min(1, y / total).toFixed(4) : "0");
+        }
+        busy = false;
+      });
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -57,28 +87,65 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "bg-cream/95 backdrop-blur-md border-sand shadow-[0_2px_20px_rgba(36,50,41,0.06)]"
-          : "bg-cream border-transparent"
-      }`}
+      ref={headerRef}
+      className="sticky top-0 z-50 bg-pine-deep text-cream shadow-[0_2px_24px_rgba(7,23,55,0.35)]"
+      style={{ ["--sp" as string]: "0" }}
     >
+      {/* ── Utility top bar (collapses on scroll) ── */}
+      <div
+        className={`hidden lg:block overflow-hidden transition-all duration-300 ${
+          compact ? "max-h-0 opacity-0" : "max-h-12 opacity-100"
+        }`}
+      >
+        <div className="mx-auto flex h-12 max-w-7xl items-center justify-end gap-8 px-5 sm:px-8">
+          <div className="flex items-center gap-8 text-[15px] text-cream/80">
+            <a href={SITE.phoneHref} className="flex items-center gap-2 transition-colors hover:text-honey">
+              <Ic d={ICO.phone} className="h-4 w-4 text-honey" />
+              {SITE.phone}
+            </a>
+            <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 transition-colors hover:text-honey">
+              <Ic d={ICO.mail} className="h-4 w-4 text-honey" />
+              {SITE.email}
+            </a>
+            <span className="hidden xl:flex items-center gap-2">
+              <Ic d={ICO.clock} className="h-4 w-4 text-honey" />
+              Vizite zilnice, fără programare
+            </span>
+          </div>
+          <span className="pill-blink inline-flex items-center gap-2.5 rounded-full border border-honey/50 bg-honey/20 px-5 py-1.5 text-[14px] font-semibold text-honey">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+            Internare chiar în aceeași zi
+          </span>
+        </div>
+      </div>
+
+      {/* ── Main bar ── */}
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="flex h-16 md:h-20 items-center justify-between gap-6">
-          <Link href="/" className="flex items-center gap-3 shrink-0">
+        <div
+          className={`flex items-center justify-between gap-6 transition-all duration-300 ${
+            compact ? "h-14 md:h-16" : "h-16 md:h-20"
+          }`}
+        >
+          <Link
+            href="/"
+            className={`flex flex-col items-center gap-1 shrink-0 rounded-b-3xl border-x border-b border-cream/15 bg-pine-deep px-6 pb-3 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 ${
+              compact ? "-mt-1 pt-2" : "-mt-3 pt-4"
+            }`}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/img/logo.png"
               alt="Căminul Empathy"
-              className="h-11 w-11 rounded-xl object-contain"
+              className={`object-contain transition-all duration-300 ${
+                compact ? "h-12 w-12" : "h-28 w-28"
+              }`}
             />
-            <span className="leading-tight">
-              <span className="block font-display text-lg md:text-xl font-semibold text-pine-deep">
-                Empathy
-              </span>
-              <span className="block text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-                Cămin de bătrâni · Ilfov
-              </span>
+            <span
+              className={`block uppercase tracking-[0.22em] text-cream/70 transition-all duration-300 ${
+                compact ? "hidden" : "text-[10px]"
+              }`}
+            >
+              Cămin de bătrâni · Ilfov
             </span>
           </Link>
 
@@ -98,8 +165,8 @@ export default function Header() {
                   <div
                     className={`flex items-center rounded-full transition-colors ${
                       active || open
-                        ? "bg-pine-mist text-pine-deep"
-                        : "text-ink-soft hover:text-pine-deep hover:bg-pine-mist/60"
+                        ? "bg-cream/10 text-honey"
+                        : "text-cream/80 hover:text-cream hover:bg-cream/5"
                     }`}
                   >
                     <Link
@@ -152,18 +219,16 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href={SITE.phoneHref}
-              className="hidden md:inline-flex items-center gap-2 rounded-full bg-clay px-5 py-2.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-clay-deep"
+              className="hidden md:inline-flex items-center gap-2 rounded-full bg-honey px-5 py-2.5 text-[15px] font-semibold text-pine-deep shadow-sm transition-colors hover:bg-clay-deep hover:text-cream"
             >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.7a2 2 0 0 1 1.7 2z" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <Ic d={ICO.phone} className="h-4 w-4" />
               {SITE.phone}
             </a>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-expanded={menuOpen}
               aria-label="Meniu"
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-sand bg-white/60 text-ink"
+              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                 {menuOpen ? (
@@ -177,20 +242,20 @@ export default function Header() {
         </div>
       </div>
 
-      {/* ── Mobile nav (accordion) ── */}
+      {/* ── Mobile nav ── */}
       {menuOpen && (
-        <nav className="lg:hidden border-t border-sand bg-cream px-5 py-4" aria-label="Mobil">
+        <nav className="lg:hidden border-t border-cream/15 bg-pine-deep px-5 py-4" aria-label="Mobil">
           <div className="flex flex-col gap-1">
             {NAV.map((item) => {
               const hasSub = !!item.children?.length;
               const expanded = accOpen === item.label;
               return (
                 <div key={item.label}>
-                  <div className="flex items-center rounded-xl hover:bg-pine-mist">
+                  <div className="flex items-center rounded-xl hover:bg-cream/10">
                     <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="flex-1 px-4 py-3 text-[16px] font-medium text-ink"
+                      className="flex-1 px-4 py-3 text-[16px] font-medium text-cream"
                     >
                       {item.label}
                     </Link>
@@ -200,20 +265,20 @@ export default function Header() {
                         aria-expanded={expanded}
                         aria-label={`Submeniu ${item.label}`}
                         onClick={() => setAccOpen(expanded ? null : item.label)}
-                        className="px-4 py-3 text-ink-soft"
+                        className="px-4 py-3 text-cream/60"
                       >
                         <Chevron open={expanded} />
                       </button>
                     )}
                   </div>
                   {hasSub && expanded && (
-                    <ul className="mb-1 ml-4 border-l-2 border-pine-mist pl-3">
+                    <ul className="mb-1 ml-4 border-l-2 border-cream/15 pl-3">
                       {item.children!.map((c) => (
                         <li key={c.href}>
                           <Link
                             href={c.href}
                             onClick={() => setMenuOpen(false)}
-                            className="block rounded-lg px-3 py-2.5 text-[15px] text-ink-soft hover:bg-pine-mist hover:text-pine-deep"
+                            className="block rounded-lg px-3 py-2.5 text-[15px] text-cream/75 hover:bg-cream/10 hover:text-cream"
                           >
                             {c.label}
                           </Link>
@@ -226,13 +291,20 @@ export default function Header() {
             })}
             <a
               href={SITE.phoneHref}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-clay px-5 py-3 font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-honey px-5 py-3 font-semibold text-pine-deep"
             >
               Sună: {SITE.phone}
             </a>
           </div>
         </nav>
       )}
+
+      {/* ── Scroll progress bar ── */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-[3px] bg-honey transition-[width] duration-150"
+        style={{ width: "calc(var(--sp, 0) * 100%)" }}
+        aria-hidden
+      />
     </header>
   );
 }

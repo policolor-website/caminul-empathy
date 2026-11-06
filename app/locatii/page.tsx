@@ -84,7 +84,7 @@ export default function LocatiiPage() {
           <p className="mt-3 text-lg text-ink-soft">
             Sunați-ne — vă recomandăm centrul potrivit în funcție de situație și de unde locuiți.
           </p>
-          <a href={SITE.phoneHref} className="mt-6 inline-flex items-center gap-2 rounded-full bg-clay px-8 py-4 font-semibold text-white hover:bg-clay-deep">
+          <a href={SITE.phoneHref} className="mt-6 inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep">
             <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
           </a>
         </div>

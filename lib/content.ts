@@ -25,6 +25,15 @@ export type NavItem = {
 export const NAV: NavItem[] = [
   { href: "/", label: "Acasă" },
   {
+    href: "/tarife",
+    label: "Cât costă",
+    children: [
+      { href: "/tarife#inclus", label: "Ce include tariful" },
+      { href: "/tarife#factori", label: "Cum se calculează" },
+      { href: "/contact", label: "Cere o estimare" },
+    ],
+  },
+  {
     href: "/despre-noi",
     label: "Despre noi",
     children: [
@@ -57,15 +66,6 @@ export const NAV: NavItem[] = [
       { href: "/locatii/orhideelor", label: "Empathy Orhideelor · Domnești" },
       { href: "/locatii/clinceni", label: "Empathy Clinceni · Bragadiru" },
       { href: "/locatii", label: "Toate locațiile" },
-    ],
-  },
-  {
-    href: "/tarife",
-    label: "Tarife",
-    children: [
-      { href: "/tarife#inclus", label: "Ce include tariful" },
-      { href: "/tarife#factori", label: "Cum se calculează" },
-      { href: "/contact", label: "Cere o estimare" },
     ],
   },
   { href: "/galerie", label: "Galerie" },

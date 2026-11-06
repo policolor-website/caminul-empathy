@@ -43,7 +43,7 @@ export default function HomePage() {
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-clay px-7 py-3.5 text-[16px] font-semibold text-white shadow-md transition-all hover:bg-clay-deep hover:shadow-lg"
+                    className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 text-[16px] font-semibold text-pine-deep shadow-md transition-all hover:bg-clay-deep hover:shadow-lg"
                   >
                     <Icon name="calendar" className="h-5 w-5" />
                     Programează o vizită gratuită
@@ -391,7 +391,7 @@ export default function HomePage() {
             ))}
           </div>
           <Reveal delay={300} className="mt-12 flex flex-wrap justify-center gap-4">
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-clay px-7 py-3.5 font-semibold text-white transition-colors hover:bg-clay-deep">
+            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep transition-colors hover:bg-clay-deep">
               <Icon name="phone" className="h-5 w-5" />
               Sună acum: {SITE.phone}
             </a>
