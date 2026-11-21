@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -64,6 +65,13 @@ export default function ServiciiPage() {
                       <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">
                         {DETAILS[s.slug]}
                       </p>
+                      <Link
+                        href={`/servicii/${s.slug}`}
+                        className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-pine hover:text-clay"
+                      >
+                        Pagina completă a serviciului
+                        <Icon name="arrow" className="h-4 w-4" />
+                      </Link>
                     </div>
                   </div>
                 </article>

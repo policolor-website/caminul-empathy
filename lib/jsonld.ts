@@ -133,6 +133,36 @@ export function faqNode() {
   };
 }
 
+export function serviceNode(
+  slug: string,
+  name: string,
+  description: string
+) {
+  return {
+    "@type": "Service",
+    "@id": `${BASE}/servicii/${slug}#service`,
+    name,
+    description,
+    url: `${BASE}/servicii/${slug}`,
+    provider: { "@id": `${BASE}/#org` },
+    areaServed: [
+      { "@type": "City", name: "București" },
+      { "@type": "AdministrativeArea", name: "Ilfov" },
+    ],
+  };
+}
+
+export function serviceFaqNode(faqs: { q: string; a: string }[]) {
+  return {
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
 export function breadcrumbNode(items: { name: string; path: string }[]) {
   return {
     "@type": "BreadcrumbList",
