@@ -64,6 +64,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Script id="ga4" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-DGGLJG15Q2');`}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11043980969"
+          strategy="afterInteractive"
+        />
+        <Script id="ads" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-11043980969');`}
+        </Script>
         <Header />
         <GlowTracker />
         <main className="flex-1">{children}</main>
