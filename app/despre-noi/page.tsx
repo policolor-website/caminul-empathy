@@ -5,9 +5,11 @@ import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { SITE, STATS } from "@/lib/content";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Despre noi",
+  title: "Despre noi — Cămin de bătrâni Empathy, Ilfov",
+  alternates: { canonical: "/despre-noi" },
   description:
     "Căminele Empathy: din 2019, patru locații moderne în Ilfov pentru îngrijirea seniorilor. 100+ familii alături de noi, îngrijire medicală 24/7.",
 };
@@ -44,7 +46,7 @@ export default function DespreNoiPage() {
             4 locații, o singură familie
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            Oferim îngrijire cu empatie și profesionalism pentru seniori, în patru cămine moderne din Ilfov.
+            De la 2019 oferim îngrijire cu empatie și profesionalism pentru seniori, în patru cămine de bătrâni moderne din Ilfov.
           </p>
         </div>
       </section>
@@ -179,6 +181,15 @@ export default function DespreNoiPage() {
           </Reveal>
         </div>
       </section>
+
+      <RelatedLinks
+        links={[
+      { href: "/servicii", label: "Serviciile noastre" },
+      { href: "/locatii", label: "Căminele din Ilfov" },
+      { href: "/tarife", label: "Tarife" },
+      { href: "/galerie", label: "Galerie foto" },
+    ]}
+      />
     </>
   );
 }

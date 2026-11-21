@@ -3,9 +3,11 @@ import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { SERVICES, SITE } from "@/lib/content";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Servicii",
+  title: "Servicii cămin de bătrâni — Empathy Ilfov",
+  alternates: { canonical: "/servicii" },
   description:
     "Servicii cămin de bătrâni Empathy: îngrijire pe termen lung, Alzheimer și demență, kinetoterapie, terapie ocupațională, logopedie, nutriție enterală, escare.",
 };
@@ -41,7 +43,7 @@ export default function ServiciiPage() {
             Îngrijire completă, pentru fiecare situație
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            De la seniori activi la persoane dependente de îngrijire — fiecare rezident primește un plan adaptat nevoilor lui.
+            Servicii complete de îngrijire la căminul de bătrâni: de la seniori activi la persoane dependente de îngrijire — fiecare rezident primește un plan adaptat nevoilor lui.
           </p>
         </div>
       </section>
@@ -87,6 +89,15 @@ export default function ServiciiPage() {
           </Reveal>
         </div>
       </section>
+
+      <RelatedLinks
+        links={[
+      { href: "/tarife", label: "Tarife cămin de bătrâni" },
+      { href: "/locatii", label: "Locațiile noastre" },
+      { href: "/intrebari-frecvente", label: "Întrebări frecvente" },
+      { href: "/contact", label: "Contact" },
+    ]}
+      />
     </>
   );
 }

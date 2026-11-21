@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     locale: "ro_RO",
     siteName: SITE.name,
   },
+  twitter: {
+    card: "summary_large_image",
+  },
   robots: { index: true, follow: true },
 };
 

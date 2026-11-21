@@ -4,9 +4,11 @@ import Link from "next/link";
 import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import { LOCATIONS, SITE } from "@/lib/content";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Locații",
+  title: "Locații — 4 cămine de bătrâni în Ilfov | Empathy",
+  alternates: { canonical: "/locatii" },
   description:
     "Cele patru cămine Empathy din Ilfov: Cetinei, Orhideelor și Fortunei în Domnești, plus Clinceni în Bragadiru — la 15–20 de minute de București.",
 };
@@ -23,7 +25,7 @@ export default function LocatiiPage() {
             Patru cămine în Ilfov, aproape de București
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            Toate în zone liniștite și verzi, la 15–20 de minute de Capitală — pentru ca familia să fie mereu aproape.
+            Patru cămine de bătrâni în Ilfov, în zone liniștite și verzi, la 15–20 de minute de Capitală — pentru ca familia să fie mereu aproape de căminul de bătrâni ales.
           </p>
         </div>
       </section>
@@ -61,13 +63,24 @@ export default function LocatiiPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href={`/locatii/${l.slug}`}
-                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-pine px-6 py-3 font-semibold text-white transition-colors hover:bg-pine-deep"
-                    >
-                      Vezi centrul {l.short}
-                      <Icon name="arrow" className="h-4 w-4" />
-                    </Link>
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
+                      <Link
+                        href={`/locatii/${l.slug}`}
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-pine px-6 py-3 font-semibold text-white transition-colors hover:bg-pine-deep"
+                      >
+                        Vezi centrul {l.short}
+                        <Icon name="arrow" className="h-4 w-4" />
+                      </Link>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${l.coords.lat},${l.coords.lng}`}
+                        target="_blank"
+                        rel="noopener"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-pine hover:text-clay"
+                      >
+                        <Icon name="pin" className="h-4 w-4" />
+                        Google Maps
+                      </a>
+                    </div>
                   </div>
                 </article>
               </Reveal>
@@ -89,6 +102,15 @@ export default function LocatiiPage() {
           </a>
         </div>
       </section>
+
+      <RelatedLinks
+        links={[
+      { href: "/tarife", label: "Tarife cămin de bătrâni" },
+      { href: "/servicii", label: "Servicii de îngrijire" },
+      { href: "/acte-necesare-internare", label: "Acte necesare & internare" },
+      { href: "/contact", label: "Contact" },
+    ]}
+      />
     </>
   );
 }

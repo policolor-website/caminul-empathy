@@ -4,9 +4,11 @@ import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { INCLUDED, SITE } from "@/lib/content";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Tarife",
+  title: "Tarife cămin de bătrâni — 3.899–7.000 lei/lună | Empathy",
+  alternates: { canonical: "/tarife" },
   description:
     "Tarife cămin de bătrâni Empathy: 3.899–7.000 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.",
 };
@@ -138,6 +140,15 @@ export default function TarifePage() {
           </Reveal>
         </div>
       </section>
+
+      <RelatedLinks
+        links={[
+      { href: "/locatii", label: "Căminele noastre în Ilfov" },
+      { href: "/acte-necesare-internare", label: "Acte necesare & internare" },
+      { href: "/intrebari-frecvente", label: "Întrebări frecvente" },
+      { href: "/contact", label: "Cere o estimare" },
+    ]}
+      />
     </>
   );
 }

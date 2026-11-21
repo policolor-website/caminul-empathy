@@ -3,9 +3,11 @@ import Image from "next/image";
 import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import { GALLERY, SITE } from "@/lib/content";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Galerie foto",
+  title: "Galerie foto — căminele Empathy din Ilfov",
+  alternates: { canonical: "/galerie" },
   description:
     "Fotografii reale din căminele Empathy din Ilfov: camere, spații comune, grădină, activități cu rezidenții.",
 };
@@ -22,7 +24,7 @@ export default function GaleriePage() {
             Viața la Empathy, în imagini
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            Fotografii reale din căminele noastre — camere, spații comune, grădină și momente din zilele rezidenților.
+            Fotografii reale din căminele noastre de bătrâni — camere, spații comune, grădină și momente din zilele rezidenților.
           </p>
         </div>
       </section>
@@ -60,6 +62,14 @@ export default function GaleriePage() {
           </a>
         </div>
       </section>
+
+      <RelatedLinks
+        links={[
+      { href: "/locatii", label: "Căminele noastre" },
+      { href: "/servicii", label: "Servicii" },
+      { href: "/contact", label: "Programează o vizită" },
+    ]}
+      />
     </>
   );
 }

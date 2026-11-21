@@ -2,10 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icons";
 import ImageCarousel from "@/components/ImageCarousel";
+import LocationMap from "@/components/LocationMap";
+import ReviewsMarquee from "@/components/ReviewsMarquee";
 import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
+import JsonLd from "@/components/JsonLd";
+import {
+  faqNode, graph, locationNode, orgNode, webpageNode, websiteNode,
+} from "@/lib/jsonld";
 import {
   FAQS, FIT, INCLUDED, LOCATIONS, REVIEWS, SERVICES, SITE, STATS, STEPS,
 } from "@/lib/content";
@@ -13,6 +19,20 @@ import {
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          orgNode(),
+          ...LOCATIONS.map(locationNode),
+          websiteNode(),
+          webpageNode(
+            "/",
+            "Căminul Empathy — Cămin de bătrâni în Ilfov",
+            "Cămin de bătrâni privat în Domnești și Bragadiru, Ilfov: îngrijire medicală 24/7, patru locații, tarife de la 3.899 lei/lună."
+          ),
+          faqNode()
+        )}
+      />
+
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-cream">
         <div className="pointer-events-none absolute -top-32 -right-32 h-[480px] w-[480px] rounded-full bg-pine-mist/70 blur-3xl" />
@@ -34,7 +54,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={160}>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-                  Îngrijire medicală 24/7, medic geriatru și o echipă care tratează
+                  Căminul de bătrâni Empathy: îngrijire medicală 24/7, medic geriatru și o echipă care tratează
                   fiecare rezident ca pe un membru al familiei. La 15–20 de minute
                   de București, în Domnești și Bragadiru.
                 </p>
@@ -199,7 +219,7 @@ export default function HomePage() {
                 align="left"
                 eyebrow="Despre noi"
                 title="Patru locații. Aceeași căldură."
-                lead={`Din ${SITE.since}, oferim seniorilor un mediu sigur, activ și plin de atenție — ca o familie mare. Fiecare rezident primește un plan de îngrijire adaptat nevoilor lui.`}
+                lead={`Din ${SITE.since}, căminul de bătrâni Empathy oferă seniorilor un mediu sigur, activ și plin de atenție — ca o familie mare. Fiecare rezident primește un plan de îngrijire adaptat nevoilor lui.`}
               />
               <div className="mt-8 space-y-4">
                 {[
@@ -232,6 +252,7 @@ export default function HomePage() {
               </Reveal>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -263,6 +284,7 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
 
       {/* ─── IMAGE CAROUSEL ─── */}
       <section className="pb-16 md:pb-20">
@@ -367,6 +389,49 @@ export default function HomePage() {
           </Reveal>
         </div>
         <ImageCarousel seed={7} duration={70} reverse />
+      </section>
+
+      {/* ─── LOCATIONS MAP ─── */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Pe hartă"
+            title="Patru cămine de bătrâni, patru puncte în Ilfov"
+            lead="Fiecare locație are harta ei — cu pinul fix pe adresă. Alege cel mai aproape de tine sau de familia ta."
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {[...LOCATIONS.slice(0, 2), null, ...LOCATIONS.slice(2)].map((l, i) =>
+              l === null ? (
+                <ReviewsMarquee key="reviews" reviews={REVIEWS} />
+              ) : (
+              <Reveal key={l.slug} delay={(i % 2) * 80}>
+                <div data-glow data-tilt className="overflow-hidden rounded-3xl border border-sand bg-white shadow-sm">
+                  <div className="p-6 pb-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="font-display text-xl font-semibold text-pine-deep">{l.name}</div>
+                        <div className="mt-1 text-sm text-ink-soft">{l.address}</div>
+                      </div>
+                      <span className="shrink-0 rounded-full bg-honey/20 px-3 py-1 text-[12px] font-semibold text-clay">
+                        {l.badge}
+                      </span>
+                    </div>
+                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft">{l.blurb}</p>
+                    <Link
+                      href={`/locatii/${l.slug}`}
+                      className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-pine hover:text-clay"
+                    >
+                      Detalii locație <Icon name="arrow" className="h-4 w-4" />
+                    </Link>
+                  </div>
+                  <div className="h-72">
+                    <LocationMap locations={[l]} />
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ─── STEPS ─── */}

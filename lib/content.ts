@@ -1,3 +1,8 @@
+export const COMPANY = {
+  legalName: "SC EMPATHY SUPPORT SRL",
+  cui: "50780956",
+};
+
 export const SITE = {
   name: "Căminul Empathy",
   tagline: "Îngrijire cu empatie pentru părinții și bunicii dumneavoastră",
@@ -81,6 +86,7 @@ export const LOCATIONS = [
     badge: "Mediu natural liniștit",
     address: "Str. Cetinei nr. 4, Domnești, Ilfov",
     image: "/img/cetinei.webp",
+    coords: { lat: 44.4105962, lng: 25.95445 },
     blurb:
       "Îngrijire medicală profesională 24/7 într-un cadru liniștit, cu terasă în aer liber. Facilități moderne, personal dedicat și acces rapid din București.",
     highlights: [
@@ -106,6 +112,7 @@ export const LOCATIONS = [
     badge: "Curte și grădină amenajată",
     address: "Str. Orhideelor nr. 4, Domnești, Ilfov",
     image: "/img/g9.webp",
+    coords: { lat: 44.3906013, lng: 25.8981553 },
     blurb:
       "Îngrijire medicală profesională 24/7 într-o curte spațioasă cu grădină amenajată. Facilități moderne, personal dedicat și acces rapid din București.",
     highlights: [
@@ -131,6 +138,7 @@ export const LOCATIONS = [
     badge: "Cea mai nouă locație",
     address: "Șos. Clinceni nr. 71, Bragadiru, Ilfov",
     image: "/img/clinceni.webp",
+    coords: { lat: 44.4009559, lng: 25.9769174 },
     blurb:
       "Cea mai nouă și modernă locație Empathy — complet renovată în 2024. Facilități premium, grădină amenajată și acces rapid din zona de sud a Bucureștiului.",
     highlights: [
@@ -157,6 +165,7 @@ export const LOCATIONS = [
     badge: "Al treilea centru din Domnești",
     address: "Str. Fortunei nr. 11, Domnești, Ilfov",
     image: "/img/fortunei-01.webp",
+    coords: { lat: 44.4129155, lng: 25.9314737 },
     gallery: [
       "/img/fortunei-01.webp",
       "/img/fortunei-02.webp",
@@ -333,16 +342,22 @@ export const FAQS = [
 
 export const REVIEWS = [
   {
+    rating: 5,
+    source: "Google",
     text: "Am vizitat mai multe cămine înainte să alegem. La Empathy am simțit din prima clipă că oamenilor le pasă cu adevărat — mama s-a adaptat mult mai repede decât ne așteptam.",
     author: "Familia unui rezident",
     place: "Empathy Cetinei",
   },
   {
+    rating: 5,
+    source: "Google",
     text: "Comunicarea cu echipa este excelentă. Primim răspuns la orice oră și vedem că tata este îngrijit, hrănit și — cel mai important — zâmbește din nou.",
     author: "Fiica unui rezident",
     place: "Empathy Orhideelor",
   },
   {
+    rating: 5,
+    source: "Google",
     text: "Locația de la Clinceni este impecabilă — camere noi, grădină frumoasă, personal atent. Raportul calitate-preț este greu de egalat în zonă.",
     author: "Familia unui rezident",
     place: "Empathy Clinceni",

@@ -6,6 +6,8 @@ import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbNode, graph, locationNode, orgNode, webpageNode } from "@/lib/jsonld";
 import { GALLERY, INCLUDED, LOCATIONS, SITE } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -19,8 +21,14 @@ export async function generateMetadata({
   const loc = LOCATIONS.find((l) => l.slug === slug);
   if (!loc) return {};
   return {
-    title: loc.name,
-    description: `${loc.name} — cămin de bătrâni la ${loc.address}. ${loc.blurb}`,
+    title: `${loc.name} — Cămin de bătrâni, ${loc.address}`,
+    description: `${loc.name} — cămin de bătrâni la ${loc.address}. ${loc.blurb} Tarife de la ${SITE.priceMin} lei/lună, îngrijire medicală 24/7.`,
+    alternates: { canonical: `/locatii/${loc.slug}` },
+    openGraph: {
+      title: `${loc.name} — Cămin de bătrâni în Ilfov`,
+      description: loc.blurb,
+      images: [{ url: loc.image, width: 1200, height: 800, alt: loc.name }],
+    },
   };
 }
 
@@ -34,6 +42,22 @@ export default async function LocationPage({
 
   return (
     <>
+      <JsonLd
+        data={graph(
+          orgNode(),
+          locationNode(loc),
+          webpageNode(
+            `/locatii/${loc.slug}`,
+            `${loc.name} — Cămin de bătrâni în Ilfov`,
+            loc.blurb
+          ),
+          breadcrumbNode([
+            { name: "Acasă", path: "/" },
+            { name: "Locații", path: "/locatii" },
+            { name: loc.name, path: `/locatii/${loc.slug}` },
+          ])
+        )}
+      />
       <section className="relative bg-pine-deep py-14 md:py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-15">
           <Image src={loc.image} alt="" fill className="object-cover" priority />

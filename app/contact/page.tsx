@@ -4,9 +4,11 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 import { LOCATIONS, SITE } from "@/lib/content";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact — Căminul Empathy, Domnești & Bragadiru",
+  alternates: { canonical: "/contact" },
   description:
     "Contact Căminul Empathy: telefon 0786 300 500 / 0790 884 422. Patru locații în Ilfov — Domnești și Bragadiru. Vizite zilnice, fără programare.",
 };
@@ -23,7 +25,7 @@ export default function ContactPage() {
             Vorbiți cu noi — răspundem în 24h
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            Pentru întrebări, vizite sau evaluare gratuită — sunați sau lăsați un mesaj.
+            Contactați-ne pentru întrebări despre căminul de bătrâni, vizite sau evaluarea gratuită — sunați sau lăsați un mesaj.
           </p>
         </div>
       </section>
@@ -85,6 +87,15 @@ export default function ContactPage() {
                           <Icon name="clock" className="mr-1 inline h-3.5 w-3.5" />
                           Vizite: {l.visitHours}
                         </div>
+                        <a
+                          href={`https://www.google.com/maps/search/?api=1&query=${l.coords.lat},${l.coords.lng}`}
+                          target="_blank"
+                          rel="noopener"
+                          className="mt-1.5 inline-flex items-center gap-1 text-sm font-medium text-pine hover:text-clay"
+                        >
+                          Deschide în Google Maps
+                          <Icon name="arrow" className="h-3.5 w-3.5" />
+                        </a>
                         <div className="mt-2 text-sm font-medium">
                           <a href={SITE.phone2Href} className="text-clay hover:text-clay-deep">
                             {SITE.phone2} — {SITE.phone2Name}
@@ -115,6 +126,15 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        links={[
+      { href: "/locatii", label: "Căminele noastre" },
+      { href: "/acte-necesare-internare", label: "Acte necesare & internare" },
+      { href: "/intrebari-frecvente", label: "Întrebări frecvente" },
+      { href: "/tarife", label: "Tarife" },
+    ]}
+      />
     </>
   );
 }
