@@ -92,13 +92,13 @@ export default function DespreNoiPage() {
               </Reveal>
             </div>
             <Reveal delay={150} variant="zoom">
-              <div className="overflow-hidden rounded-[2rem] shadow-xl">
+              <div className="flex items-center justify-center overflow-hidden rounded-[2rem] bg-cream px-10 py-16 shadow-xl">
                 <Image
-                  src="/img/casa.png"
-                  alt="Interiorul căminului Empathy"
-                  width={900}
-                  height={640}
-                  className="h-auto w-full object-cover"
+                  src="/img/logo.webp"
+                  alt="Logo Căminul Empathy"
+                  width={500}
+                  height={500}
+                  className="h-auto w-full max-w-xs object-contain"
                 />
               </div>
             </Reveal>
