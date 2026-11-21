@@ -108,9 +108,14 @@ export function websiteNode() {
   };
 }
 
-export function webpageNode(path: string, name: string, description: string) {
+export function webpageNode(
+  path: string,
+  name: string,
+  description: string,
+  type = "WebPage"
+) {
   return {
-    "@type": "WebPage",
+    "@type": type,
     "@id": `${BASE}${path}#webpage`,
     url: `${BASE}${path}`,
     name,
@@ -118,6 +123,22 @@ export function webpageNode(path: string, name: string, description: string) {
     isPartOf: { "@id": `${BASE}/#website` },
     about: { "@id": `${BASE}/#org` },
     inLanguage: "ro",
+  };
+}
+
+export function itemListNode(
+  name: string,
+  items: { name: string; url: string }[]
+) {
+  return {
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: it.url,
+    })),
   };
 }
 

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/content";
+import { breadcrumbNode, graph, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Politica de confidențialitate",
@@ -46,6 +48,12 @@ const SECTIONS = [
 export default function ConfidentialitatePage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          webpageNode("/politica-de-confidentialitate", "Politica de confidențialitate — Căminul Empathy", "Politica de confidențialitate a Căminului Empathy: ce date personale colectăm, cum le folosim și cum își pot exercita drepturile persoanele vizate, conform GDPR."),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Politica de confidențialitate", path: "/politica-de-confidențialitate" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">

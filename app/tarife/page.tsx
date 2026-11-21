@@ -5,6 +5,8 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { INCLUDED, SITE } from "@/lib/content";
 import RelatedLinks from "@/components/RelatedLinks";
+import { breadcrumbNode, graph, orgNode, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Cămin de bătrâni ieftin — tarife de la 3.899 lei/lună | Empathy",
@@ -23,6 +25,13 @@ const FACTORS = [
 export default function TarifePage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          orgNode(),
+          webpageNode("/tarife", "Tarife cămin de bătrâni — Empathy", "Tarife cămin de bătrâni Empathy: 3.899–7.000 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.", "OfferCatalog"),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Tarife", path: "/tarife" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">

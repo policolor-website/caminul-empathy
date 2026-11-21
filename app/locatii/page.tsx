@@ -5,6 +5,10 @@ import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import { LOCATIONS, SITE } from "@/lib/content";
 import RelatedLinks from "@/components/RelatedLinks";
+import { breadcrumbNode, graph, itemListNode, orgNode, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
+
+const BASE = `https://${SITE.domain}`;
 
 export const metadata: Metadata = {
   title: "Locații — 4 cămine de bătrâni în Ilfov | Empathy",
@@ -16,6 +20,14 @@ export const metadata: Metadata = {
 export default function LocatiiPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          orgNode(),
+          itemListNode("Cămine de bătrâni Empathy în Ilfov", LOCATIONS.map((l) => ({ name: l.name, url: `${BASE}/locatii/${l.slug}` }))),
+          webpageNode("/locatii", "Locații — 4 cămine de bătrâni în Ilfov", "Patru cămine de bătrâni Empathy în Ilfov: Cetinei, Orhideelor și Fortunei în Domnești, plus Clinceni în Bragadiru — la 15–20 de minute de București.", "CollectionPage"),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Locații", path: "/locatii" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">

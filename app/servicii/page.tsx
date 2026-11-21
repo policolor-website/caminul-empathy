@@ -5,6 +5,10 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { SERVICES, SITE } from "@/lib/content";
 import RelatedLinks from "@/components/RelatedLinks";
+import { breadcrumbNode, graph, itemListNode, orgNode, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
+
+const BASE = `https://${SITE.domain}`;
 
 export const metadata: Metadata = {
   title: "Servicii cămin de bătrâni — Empathy Ilfov",
@@ -35,6 +39,14 @@ const DETAILS: Record<string, string> = {
 export default function ServiciiPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          orgNode(),
+          itemListNode("Servicii cămin de bătrâni Empathy", SERVICES.map((s) => ({ name: s.title, url: `${BASE}/servicii/${s.slug}` }))),
+          webpageNode("/servicii", "Servicii cămin de bătrâni — Empathy Ilfov", "Servicii complete de îngrijire la căminul de bătrâni Empathy: îngrijire pe termen lung, Alzheimer și demență, kinetoterapie, terapie ocupațională, logopedie, nutriție enterală, escare.", "CollectionPage"),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Servicii", path: "/servicii" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">

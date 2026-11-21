@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/content";
+import { breadcrumbNode, graph, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Termeni și condiții",
@@ -42,6 +44,12 @@ const SECTIONS = [
 export default function TermeniPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          webpageNode("/termeni-si-conditii", "Termeni și condiții — Căminul Empathy", "Termenii și condițiile de utilizare a site-ului Căminului Empathy și ale serviciilor de cazare și îngrijire a vârstnicilor."),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Termeni și condiții", path: "/termeni-si-conditii" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">

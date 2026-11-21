@@ -4,6 +4,8 @@ import Icon from "@/components/Icons";
 import Reveal from "@/components/Reveal";
 import { GALLERY, SITE } from "@/lib/content";
 import RelatedLinks from "@/components/RelatedLinks";
+import { breadcrumbNode, graph, orgNode, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Galerie foto — căminele Empathy din Ilfov",
@@ -15,6 +17,13 @@ export const metadata: Metadata = {
 export default function GaleriePage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          orgNode(),
+          webpageNode("/galerie", "Galerie foto — căminele Empathy", "Fotografii reale din căminele Empathy din Ilfov: camere, spații comune, grădină, activități cu rezidenții.", "CollectionPage"),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Galerie", path: "/galerie" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">

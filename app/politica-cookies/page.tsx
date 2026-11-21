@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { breadcrumbNode, graph, webpageNode } from "@/lib/jsonld";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Politica de cookies",
@@ -29,6 +31,12 @@ const SECTIONS = [
 export default function CookiesPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          webpageNode("/politica-cookies", "Politica de cookies — Căminul Empathy", "Politica de cookies a Căminului Empathy: ce cookie-uri folosim, de ce și cum puteți gestiona preferințele."),
+          breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Politica de cookies", path: "/politica-cookies" }])
+        )}
+      />
       <section className="bg-pine-deep py-14 md:py-20 text-center">
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-honey">
