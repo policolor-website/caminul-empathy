@@ -17,7 +17,7 @@ export const SITE = {
   whatsapp: "https://wa.me/40786300500",
   since: 2019,
   domain: "www.caminulempathy.ro",
-  priceMin: "3.899",
+  priceMin: "4.500",
   priceMax: "7.000",
 };
 

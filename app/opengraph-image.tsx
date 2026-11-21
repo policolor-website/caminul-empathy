@@ -52,7 +52,7 @@ export default function OpengraphImage() {
           Căminul Empathy
         </div>
         <div style={{ fontSize: 36, color: "#F0D9B0", marginTop: 28, maxWidth: 1000 }}>
-          Îngrijire medicală 24/7 · 4 locații în Ilfov · de la 3.899 lei/lună
+          Îngrijire medicală 24/7 · 4 locații în Ilfov · de la 4.500 lei/lună
         </div>
       </div>
     ),

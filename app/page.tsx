@@ -32,7 +32,7 @@ export default function HomePage() {
           webpageNode(
             "/",
             "Căminul Empathy — Cămin de bătrâni în Ilfov",
-            "Cămin de bătrâni privat în Domnești și Bragadiru, Ilfov: îngrijire medicală 24/7, patru locații, tarife de la 3.899 lei/lună."
+            "Cămin de bătrâni privat în Domnești și Bragadiru, Ilfov: îngrijire medicală 24/7, patru locații, tarife de la 4.500 lei/lună."
           ),
           faqNode()
         )}

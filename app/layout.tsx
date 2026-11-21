@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Căminul Empathy",
   },
   description:
-    "Cămin de bătrâni în Ilfov, lângă București: 4 locații în Domnești și Bragadiru, îngrijire medicală 24/7, medic geriatru, kinetoterapie, camere cu baie proprie. Tarife de la 3.899 lei/lună.",
+    "Cămin de bătrâni în Ilfov, lângă București: 4 locații în Domnești și Bragadiru, îngrijire medicală 24/7, medic geriatru, kinetoterapie, camere cu baie proprie. Tarife de la 4.500 lei/lună.",
   openGraph: {
     type: "website",
     locale: "ro_RO",
