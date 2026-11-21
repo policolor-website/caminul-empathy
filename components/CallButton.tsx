@@ -1,11 +1,37 @@
 "use client";
 
+import { useEffect } from "react";
 import { SITE } from "@/lib/content";
 import Icon from "./Icons";
 
-const ADS_CALL_LABEL = process.env.NEXT_PUBLIC_ADS_CALL_LABEL;
+const ADS_CALL_SEND_TO = "AW-11043980969/6E9VCK2a4LwdEKmNl5Ip";
 
 export default function CallButton() {
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>(
+        'a[href^="tel:"]'
+      );
+      if (!a) return;
+      e.preventDefault();
+      const url = a.getAttribute("href") ?? SITE.phoneHref;
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: ADS_CALL_SEND_TO,
+          value: 1.0,
+          currency: "RON",
+          event_callback: () => {
+            window.location.href = url;
+          },
+        });
+      } else {
+        window.location.href = url;
+      }
+    };
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, []);
+
   const track = () => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -18,11 +44,6 @@ export default function CallButton() {
         event_category: "contact",
         event_label: "floating_call_button",
       });
-      if (ADS_CALL_LABEL) {
-        window.gtag("event", "conversion", {
-          send_to: `AW-11043980969/${ADS_CALL_LABEL}`,
-        });
-      }
     }
   };
 
