@@ -466,7 +466,7 @@ export default function HomePage() {
             {REVIEWS.map((r, i) => (
               <Reveal key={r.place} delay={i * 100}>
                 <figure data-glow data-tilt className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-sm border border-sand">
-                  <div className="flex gap-1 text-honey" aria-label="5 din 5 stele">
+                  <div className="flex gap-1 text-honey" role="img" aria-label="5 din 5 stele">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Icon key={j} name="star" className="h-4 w-4 fill-current" />
                     ))}

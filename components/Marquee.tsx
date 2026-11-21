@@ -40,6 +40,7 @@ export default function Marquee() {
   return (
     <div
       className={`marquee relative overflow-hidden border-y border-honey/40 bg-honey/90 py-3.5 ${paused ? "is-paused" : ""}`}
+      role="group"
       aria-label="Servicii și facilități"
     >
       <div className="marquee-track flex w-max">

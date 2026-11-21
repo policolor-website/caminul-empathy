@@ -44,7 +44,7 @@ export default function ImageCarousel({
 }) {
   const items = seed ? shuffled(GALLERY, seed) : GALLERY;
   return (
-    <div className="marquee overflow-hidden" aria-label="Galerie foto căminele Empathy">
+    <div className="marquee overflow-hidden" role="group" aria-label="Galerie foto căminele Empathy">
       <div
         className={`marquee-track flex w-max ${reverse ? "marquee-track--reverse" : ""}`}
         style={{ animationDuration: `${duration}s` }}
