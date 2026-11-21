@@ -9,12 +9,17 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 import JsonLd from "@/components/JsonLd";
+import type { Metadata } from "next";
 import {
   faqNode, graph, locationNode, orgNode, webpageNode, websiteNode,
 } from "@/lib/jsonld";
 import {
   FAQS, FIT, INCLUDED, LOCATIONS, REVIEWS, SERVICES, SITE, STATS, STEPS,
 } from "@/lib/content";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
@@ -48,8 +53,8 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={80}>
                 <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-pine-deep">
-                  Locul unde vârsta{" "}
-                  <em className="not-italic text-clay">se trăiește frumos</em>
+                  Căminul de bătrâni unde{" "}
+                  <em className="not-italic text-clay">vârsta se trăiește frumos</em>
                 </h1>
               </Reveal>
               <Reveal delay={160}>
