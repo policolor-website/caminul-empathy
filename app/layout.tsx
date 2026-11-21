@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlowTracker from "@/components/GlowTracker";
+import CallButton from "@/components/CallButton";
 import { SITE } from "@/lib/content";
 
 const fraunces = Fraunces({
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <GlowTracker />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CallButton />
       </body>
     </html>
   );
