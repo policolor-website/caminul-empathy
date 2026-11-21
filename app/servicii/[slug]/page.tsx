@@ -121,6 +121,20 @@ export default async function ServicePage({
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <Reveal>
             <p className="text-lg leading-relaxed text-ink-soft md:text-xl">{d.intro}</p>
+            {d.source && (
+              <p className="mt-4 text-sm leading-relaxed text-ink-soft/80">
+                {d.source.pre}{" "}
+                <a
+                  href={d.source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-pine underline decoration-honey decoration-2 underline-offset-2 hover:text-honey"
+                >
+                  {d.source.label}
+                </a>
+                {d.source.post}
+              </p>
+            )}
           </Reveal>
         </div>
       </section>

@@ -4,6 +4,7 @@ export type ServiceFaq = { q: string; a: string };
 
 export type ServiceDetail = {
   intro: string;
+  source?: { pre: string; label: string; url: string; post?: string };
   stats: ServiceStat[];
   forWhom: string[];
   includes: string[];
@@ -17,6 +18,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "termen-lung": {
     intro:
       "Îngrijirea pe termen lung la căminul de bătrâni Empathy înseamnă mai mult decât o cameră și trei mese pe zi. Este un cămin adevărat: rutine stabile, echipă medicală prezentă non-stop, activități care mențin mintea activă și o comunitate în care rezidentul nu se simte singur. Fiecare plan de îngrijire este personalizat și revizuit periodic, pe măsură ce nevoile se schimbă.",
+    source: { pre: "Pentru repere internaționale despre îmbătrânirea sănătoasă și îngrijirea persoanelor vârstnice, consultați", label: "Deceniul îmbătrânirii sănătoase al OMS", url: "https://www.who.int/initiatives/decade-of-healthy-ageing", post: "." },
     stats: [
       { v: "24/7", l: "prezență medicală continuă" },
       { v: "3+2", l: "mese și gustări zilnice" },
@@ -58,6 +60,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   neurologice: {
     intro:
       "Îngrijirea persoanelor cu Alzheimer, Parkinson și demență necesită o abordare specială: rutine stabile, personal instruit să recunoască semnalele și să răspundă fără a agrava anxietatea, plus supraveghere continuă. La căminul de bătrâni Empathy, fiecare rezident cu afecțiuni neurologice primește un plan adaptat — de la stimulare cognitivă la gestionarea momentelor de confuzie.",
+    source: { pre: "Pentru informații și ghiduri despre demență și Alzheimer, puteți consulta", label: "Alzheimer Europe", url: "https://www.alzheimer-europe.org/", post: "." },
     stats: [
       { v: "24/7", l: "supraveghere continuă" },
       { v: "100%", l: "personal instruit pentru demență" },
@@ -98,6 +101,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   kinetoterapie: {
     intro:
       "Kinetoterapia la căminul de bătrâni Empathy este nu un extras, ci o componentă centrală a îngrijirii. Kinetoterapeutul lucrează zilnic cu fiecare rezident, cu programe personalizate: recuperare post-AVC, menținerea mobilității, prevenirea complicațiilor la persoanele imobilizate și îmbunătățirea calității vieții pentru seniorii activi.",
+    source: { pre: "Kinetoterapia este o profesie reglementată — standardele de practică sunt stabilite de", label: "Colegiul Fizioterapeuților din România", url: "https://colegiulfizioterapeutilor.ro/", post: "." },
     stats: [
       { v: "Permanent", l: "kinetoterapeut angajat" },
       { v: "Zilnic", l: "ședințe individuale" },
@@ -138,6 +142,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "terapie-ocupationala": {
     intro:
       "Terapia ocupațională la Empathy înseamnă că fiecare zi are un scop. Activitățile — jocuri de masă, muzică, lectură, ateliere, sărbători — sunt gândite pentru stimularea cognitivă, menținerea abilităților motorii fine și, mai ales, pentru ca rezidenții să se simtă utili, conectați și bucuroși.",
+    source: { pre: "Pentru standardele internaționale ale profesiei de terapeut ocupațional, vedeți", label: "World Federation of Occupational Therapists", url: "https://wfot.org/", post: "." },
     stats: [
       { v: "Zilnic", l: "program de activități" },
       { v: "Cognitiv", l: "stimulare mentală" },
@@ -178,6 +183,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   logopedie: {
     intro:
       "Tulburările de vorbire și deglutiție sunt frecvente după accident vascular cerebral și în afecțiuni neurologice. Logopedia la căminul de bătrâni Empathy ajută rezidenții să-și recâștige capacitatea de a vorbi clar și de a înghiți în siguranță — cu exerciții individuale, răbdare și progres măsurabil.",
+    source: { pre: "Pentru informații despre logopedie și tulburările de comunicare, consultați", label: "Asociația Logopezilor din România", url: "https://www.logopezi.ro/", post: "." },
     stats: [
       { v: "AVC", l: "cauză principală" },
       { v: "Individual", l: "exerciții personalizate" },
@@ -217,6 +223,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "nutritie-enterala": {
     intro:
       "Alimentația este fundamentul îngrijirii. La căminul de bătrâni Empathy, bucătăria proprie pregătește zilnic mese proaspete, adaptate dietei fiecărui rezident — diabet, hipertensiune, insuficiență renală. Pentru cei care nu pot mânca normal, oferim nutriție enterală administrată sub supraveghere medicală strictă.",
+    source: { pre: "Pentru ghiduri clinice internaționale despre nutriția enterală, vedeți", label: "ESPEN — European Society for Clinical Nutrition and Metabolism", url: "https://www.espen.org/", post: "." },
     stats: [
       { v: "3+2", l: "mese și gustări zilnice" },
       { v: "Proaspăt", l: "bucătărie proprie zilnică" },
@@ -257,6 +264,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   escare: {
     intro:
       "Escarele sunt una dintre cele mai grave complicații ale imobilizării la pat — dar și una dintre cele mai prevenibile. La căminul de bătrâni Empathy, îngrijirea persoanelor imobilizate include protocoale stricte de prevenție: repoziționare regulată, saltea specială, inspecție zilnică a pielii și tratament prompt la primul semn.",
+    source: { pre: "Pentru ghidurile internaționale de prevenire și tratament al escarelor, consultați", label: "EPUAP — European Pressure Ulcer Advisory Panel", url: "https://epuap.org/", post: "." },
     stats: [
       { v: "Prevenție", l: "protocoale stricte" },
       { v: "Zilnic", l: "repoziționare și inspecție" },
@@ -297,6 +305,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   incontinenta: {
     intro:
       "Incontinența este o realitate pentru mulți vârstnici — dar nu trebuie să însemne pierderea demnității. La căminul de bătrâni Empathy, îngrijirea discretă și respectuoasă include igienă zilnică completă, produse dedicate, toaletare programată și o atitudine care protejează intimitatea rezidentului.",
+    source: { pre: "Pentru informații științifice despre incontinență, vedeți", label: "International Continence Society", url: "https://www.ics.org/", post: "." },
     stats: [
       { v: "Discret", l: "îngrijire fără judecată" },
       { v: "Zilnic", l: "igienă completă" },
