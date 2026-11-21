@@ -520,35 +520,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── REVIEWS ─── */}
-      <section id="recenzii" className="scroll-mt-20 bg-cream-deep py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Recenzii"
-            title="Ce spun familiile rezidenților"
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {REVIEWS.map((r, i) => (
-              <Reveal key={r.place} delay={i * 100}>
-                <figure data-glow data-tilt className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-sm border border-sand">
-                  <div className="flex gap-1 text-honey" role="img" aria-label="5 din 5 stele">
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <Icon key={j} name="star" className="h-4 w-4 fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="mt-4 flex-1 leading-relaxed text-ink-soft">
-                    „{r.text}”
-                  </blockquote>
-                  <figcaption className="mt-5 border-t border-sand pt-4">
-                    <div className="font-semibold text-pine-deep">{r.author}</div>
-                    <div className="text-sm text-ink-soft">{r.place}</div>
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ─── FAQ ─── */}
       <section id="faq" className="scroll-mt-20 py-16 md:py-24">
