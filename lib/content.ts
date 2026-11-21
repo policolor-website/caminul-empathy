@@ -16,7 +16,7 @@ export const SITE = {
   email2: "caminulempathy@gmail.com",
   whatsapp: "https://wa.me/40786300500",
   since: 2019,
-  domain: "caminulempathy.ro",
+  domain: "www.caminulempathy.ro",
   priceMin: "3.899",
   priceMax: "7.000",
 };
