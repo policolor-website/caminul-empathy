@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Contact — Căminul Empathy, Domnești & Bragadiru",
   alternates: { canonical: "/contact" },
   description:
-    "Contact Căminul Empathy: telefon 0786 300 500 / 0790 884 422. Patru locații în Ilfov — Domnești și Bragadiru. Vizite zilnice, fără programare.",
+    "Contact Căminul Empathy: telefon 0786 300 500 / 0790 884 422. Patru cămine de bătrâni în Ilfov, lângă București — Domnești și Bragadiru. Vizite zilnice, fără programare.",
 };
 
 export default function ContactPage() {

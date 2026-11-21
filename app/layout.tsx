@@ -19,11 +19,11 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${SITE.domain}`),
   title: {
-    default: "Căminul Empathy — Cămin de bătrâni în Ilfov, lângă București",
+    default: "Cămin de bătrâni București și Ilfov | Căminul Empathy — îngrijire 24/7",
     template: "%s · Căminul Empathy",
   },
   description:
-    "Cămin de bătrâni privat în Domnești și Bragadiru, Ilfov: îngrijire medicală 24/7, medic geriatru, kinetoterapie, camere cu baie proprie. Tarife de la 3.899 lei/lună. Vizite zilnice.",
+    "Cămin de bătrâni în Ilfov, lângă București: 4 locații în Domnești și Bragadiru, îngrijire medicală 24/7, medic geriatru, kinetoterapie, camere cu baie proprie. Tarife de la 3.899 lei/lună.",
   openGraph: {
     type: "website",
     locale: "ro_RO",

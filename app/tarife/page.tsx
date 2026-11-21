@@ -7,7 +7,7 @@ import { INCLUDED, SITE } from "@/lib/content";
 import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Tarife cămin de bătrâni — 3.899–7.000 lei/lună | Empathy",
+  title: "Cămin de bătrâni ieftin — tarife de la 3.899 lei/lună | Empathy",
   alternates: { canonical: "/tarife" },
   description:
     "Tarife cămin de bătrâni Empathy: 3.899–7.000 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.",
@@ -32,7 +32,7 @@ export default function TarifePage() {
             Un tarif clar, cu totul inclus
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            Tarif personalizat în funcție de nevoile fiecărui rezident — evaluare gratuită, fără costuri ascunse.
+            Căutarea unui cămin de bătrâni ieftin, dar fără compromisuri la îngrijire? La Empathy, în Ilfov lângă București, tariful pornește de la 3.899 lei/lună și include tot — evaluare gratuită, fără costuri ascunse.
           </p>
         </div>
       </section>
