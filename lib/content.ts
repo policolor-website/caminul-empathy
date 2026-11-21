@@ -344,23 +344,23 @@ export const REVIEWS = [
   {
     rating: 5,
     source: "Google",
-    text: "Am vizitat mai multe cămine înainte să alegem. La Empathy am simțit din prima clipă că oamenilor le pasă cu adevărat — mama s-a adaptat mult mai repede decât ne așteptam.",
-    author: "Familia unui rezident",
-    place: "Empathy Cetinei",
+    text: "Chiar sunt empatici! Da, o spun cu toată sinceritatea. Eu o am pe mama aici și datorită dumnealor este în viață. Mă duc la cămin, ca la mine acasă. Indiferent de oră sau zi, toate (atmosferă, curățenie, personal, ...) sunt ok. Nu pot decât să le mulțumesc!",
+    author: "Florin Vadeanu",
+    place: "Local Guide Google · 107 recenzii",
   },
   {
     rating: 5,
     source: "Google",
-    text: "Comunicarea cu echipa este excelentă. Primim răspuns la orice oră și vedem că tata este îngrijit, hrănit și — cel mai important — zâmbește din nou.",
-    author: "Fiica unui rezident",
-    place: "Empathy Orhideelor",
+    text: "Ma numesc Rizea, o am pe mama aici de 2 luni și nu am decât cuvinte de laudă. Am rămas impresionată de atenția și dedicarea personalului, de fiecare dată am venit neanunțată, totul a fost mereu perfect. Nu miroase ca în alte centre, mâncarea este senzațională iar vasele sunt de ceramică. De fiecare dată pe domnul Octavian sau pe doamna Raluca i-am găsit acolo, semn că se ocupă îndeaproape de bunul mers al așezământului. Vă mulțumesc, Domnul fie cu voi.",
+    author: "Rodica Rizea",
+    place: "Google Reviews",
   },
   {
     rating: 5,
     source: "Google",
-    text: "Locația de la Clinceni este impecabilă — camere noi, grădină frumoasă, personal atent. Raportul calitate-preț este greu de egalat în zonă.",
-    author: "Familia unui rezident",
-    place: "Empathy Clinceni",
+    text: "Cuvintele sunt de prisos. Nu aș reuși vreodată să pot exprima în cuvinte ceea ce am trăit în acest loc. A fost casa mamei mele în ultimul său an de viață. Indirect a fost și casa noastră, venind foarte des să o vizităm pe mama. Personalul este extraordinar, a fost ca și o notă la 10 dat cu dna Florina, cât și cu doamnele asistente. Dacă aș fi pusă din nou în situația de a alege un loc sigur pentru o persoană dragă, nu aș ezita o secundă. Recomand cu toată căldura acest cămin și vă spun cu mâna pe inimă: acești oameni mi-au îngrijit mama mai bine decât am fi reușit noi să o facem acasă. Vă mulțumesc din suflet și veți rămâne întotdeauna niște oameni speciali în viața mea!",
+    author: "Ioana Voicu",
+    place: "Google Reviews",
   },
 ];
 

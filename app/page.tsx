@@ -416,7 +416,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── LOCATIONS MAP ─── */}
-      <section className="bg-white py-16 md:py-24">
+      <section id="recenzii" className="scroll-mt-20 bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Pe hartă"

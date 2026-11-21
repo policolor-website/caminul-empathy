@@ -27,6 +27,13 @@ export function orgNode() {
     vatID: `RO${COMPANY.cui}`,
     taxID: COMPANY.cui,
     foundingDate: String(SITE.since),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.4",
+      reviewCount: "40",
+      bestRating: "5",
+      worstRating: "1",
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Domnești",
@@ -93,6 +100,17 @@ export function locationNode(loc: (typeof LOCATIONS)[number]) {
       },
     ],
     priceRange: `de la ${SITE.priceMin} lei/lună`,
+    ...(loc.slug === "cetinei"
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.4",
+            reviewCount: "40",
+            bestRating: "5",
+            worstRating: "1",
+          },
+        }
+      : {}),
     parentOrganization: { "@id": `${BASE}/#org` },
   };
 }
