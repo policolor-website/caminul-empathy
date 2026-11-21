@@ -241,6 +241,25 @@ export default function HomePage() {
                   </Reveal>
                 ))}
               </div>
+              <Reveal delay={300}>
+                <div className="mt-8">
+                  <div className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-soft">
+                    Centrele noastre
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    {LOCATIONS.map((l) => (
+                      <Link
+                        key={l.slug}
+                        href={`/locatii/${l.slug}`}
+                        className="inline-flex items-center gap-2 rounded-full border border-sand bg-white px-5 py-2.5 text-[15px] font-medium text-pine-deep transition-colors hover:border-pine hover:text-pine"
+                      >
+                        {l.name}
+                        <Icon name="arrow" className="h-4 w-4" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
               <Reveal delay={350}>
                 <Link
                   href="/despre-noi"
