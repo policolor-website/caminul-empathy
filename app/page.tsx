@@ -61,7 +61,7 @@ export default function HomePage() {
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                   Căminele de bătrâni Empathy: îngrijire medicală 24/7, medic geriatru și o echipă care tratează
                   fiecare rezident ca pe un membru al familiei. La 15–20 de minute
-                  de București, în Domnești și Bragadiru; patru centre de bătrâni pentru familiile din București și Ilfov.
+                  de capitală, în Domnești și Bragadiru; patru centre de bătrâni pentru familiile din București și Ilfov.
                 </p>
               </Reveal>
               <Reveal delay={240}>
