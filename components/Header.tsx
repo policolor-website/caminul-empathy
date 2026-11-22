@@ -128,7 +128,7 @@ export default function Header() {
         >
           <Link
             href="/"
-            className={`flex flex-col items-center gap-1 shrink-0 rounded-b-3xl border-x border-b border-cream/15 bg-pine-deep px-4 pb-2 pt-2 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-all duration-300 lg:px-6 lg:pb-3 ${
+            className={`flex flex-col items-center gap-1 shrink-0 rounded-b-3xl border-x border-b border-pine-deep/15 bg-honey px-4 pb-2 pt-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 lg:px-6 lg:pb-3 ${
               compact ? "-mt-1 lg:-mt-1" : "-mt-2 lg:-mt-3 lg:pt-4"
             }`}
           >
@@ -143,7 +143,7 @@ export default function Header() {
               }`}
             />
             <span
-              className={`uppercase tracking-[0.22em] text-cream/70 transition-all duration-300 ${
+              className={`uppercase tracking-[0.22em] text-pine-deep/70 transition-all duration-300 ${
                 compact ? "hidden" : "text-[9px] lg:text-[10px]"
               }`}
             >
