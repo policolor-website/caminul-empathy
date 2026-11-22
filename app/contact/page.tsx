@@ -43,7 +43,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "phone", t: "Telefon", main: SITE.phone, sub: "Non-stop, 7 zile", href: SITE.phoneHref },
+              { icon: "phone", t: "Telefon", main: SITE.phone, sub: "Informații și internări, luni–duminică, 08:00–21:00", href: SITE.phoneHref },
               { icon: "users", t: "WhatsApp", main: "Scrie-ne pe WhatsApp", sub: "Răspundem rapid", href: SITE.whatsapp },
               { icon: "pin", t: "E-mail", main: SITE.email, sub: SITE.email2, href: `mailto:${SITE.email}` },
               { icon: "clock", t: "Vizite", main: "Luni–Duminică", sub: "Fără programare", href: null },
