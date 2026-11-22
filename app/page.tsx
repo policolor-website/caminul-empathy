@@ -486,12 +486,7 @@ export default function HomePage() {
       {/* ─── FIT / HONESTY ─── */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Sincer, de la început"
-            title="Pentru cine este potrivit — și când nu"
-            lead="Vă spunem direct dacă Empathy este soluția potrivită pentru situația dumneavoastră."
-          />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             <Reveal>
               <div data-glow className="h-full rounded-3xl border-2 border-pine/30 bg-pine-mist/50 p-7 md:p-9">
                 <h3 className="flex items-center gap-3 font-display text-xl font-semibold text-pine-deep">
