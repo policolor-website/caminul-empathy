@@ -159,12 +159,14 @@ export default function HomePage() {
                   Tarif personalizat în funcție de gradul de dependență și serviciile
                   necesare. Evaluare gratuită, contract transparent, zero costuri ascunse.
                 </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link href="/tarife" className="rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep transition-colors hover:bg-cream">
+                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+                  <Link href="/tarife" className="lx-btn-gold w-full sm:w-auto">
+                    <Icon name="arrow" className="h-5 w-5" />
                     Detalii tarife
                   </Link>
-                  <a href={SITE.phoneHref} className="rounded-full border-2 border-cream/40 px-6 py-3 font-semibold text-cream transition-colors hover:bg-cream hover:text-pine-deep">
+                  <a href={SITE.phoneHref} className="lx-btn-ghost-light w-full sm:w-auto">
                     Cere o estimare
+                    <Icon name="phone" className="h-5 w-5" />
                   </a>
                 </div>
               </div>

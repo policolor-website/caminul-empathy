@@ -266,6 +266,7 @@ body {
 
 .lx-btn:hover {
   transform: translateY(-2px);
+  color: var(--color-pine-deep);
   box-shadow:
     0 12px 28px rgba(11, 31, 75, 0.22),
     inset 0 0 0 1px #d9c48f,
@@ -333,5 +334,118 @@ body {
 }
 
 .lx-btn-ghost:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── Varianta butoanelor pentru fundal inchis (sectiunea tarife) ── */
+.lx-btn-gold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 1rem 1.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-honey);
+  color: var(--color-pine-deep);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.lx-btn-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #fff;
+  transform: translateX(-101%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.lx-btn-gold > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lx-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lx-btn-gold:hover::before {
+  transform: translateX(0);
+}
+
+.lx-btn-gold:active {
+  transform: translateY(1px);
+}
+
+.lx-btn-gold svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  transition: transform 0.25s ease;
+}
+
+.lx-btn-gold:hover svg {
+  transform: translateX(3px);
+}
+
+.lx-btn-ghost-light {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 1rem 1.9rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  white-space: nowrap;
+  background: transparent;
+  color: #fff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.lx-btn-ghost-light:hover {
+  transform: translateY(-2px);
+  background: var(--color-honey);
+  border-color: var(--color-honey);
+  color: var(--color-pine-deep);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.lx-btn-ghost-light:active {
+  transform: translateY(1px);
+}
+
+.lx-btn-ghost-light svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  transition: transform 0.25s ease;
+}
+
+.lx-btn-ghost-light:hover svg {
   transform: translateX(3px);
 }
