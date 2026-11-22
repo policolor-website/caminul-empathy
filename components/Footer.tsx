@@ -91,13 +91,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="text-cream/80 hover:text-honey break-all">
-                  {SITE.email}
-                </a>
-              </li>
-              <li>
-                <a href={SITE.whatsapp} target="_blank" rel="noopener" className="text-cream/80 hover:text-honey">
-                  WhatsApp
+                <a href={`mailto:${SITE.email2}`} className="text-cream/80 hover:text-honey break-all">
+                  {SITE.email2}
                 </a>
               </li>
             </ul>
