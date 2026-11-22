@@ -128,7 +128,7 @@ export default function Header() {
         >
           <Link
             href="/"
-            className={`flex flex-col items-center gap-1 shrink-0 rounded-b-3xl border-x border-b border-pine-deep/15 bg-honey px-4 pb-2 pt-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 lg:px-6 lg:pb-3 ${
+            className={`flex items-center justify-center shrink-0 rounded-b-3xl border-x border-b border-pine-deep/10 bg-[#F4F0E6] px-4 pb-2 pt-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-300 lg:px-6 lg:pb-3 ${
               compact ? "-mt-1 lg:-mt-1" : "-mt-2 lg:-mt-3 lg:pt-4"
             }`}
           >
@@ -142,13 +142,6 @@ export default function Header() {
                 compact ? "h-9 lg:h-11" : "h-12 lg:h-16"
               }`}
             />
-            <span
-              className={`uppercase tracking-[0.22em] text-pine-deep/70 transition-all duration-300 ${
-                compact ? "hidden" : "text-[9px] lg:text-[10px]"
-              }`}
-            >
-              Cămin de bătrâni · Ilfov
-            </span>
           </Link>
 
           {/* ── Desktop nav ── */}
