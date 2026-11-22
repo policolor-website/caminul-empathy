@@ -65,17 +65,17 @@ export default function HomePage() {
                 </p>
               </Reveal>
               <Reveal delay={240}>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 text-[16px] font-semibold text-pine-deep shadow-md transition-all hover:bg-clay-deep hover:text-cream hover:shadow-lg"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-honey px-7 py-4 text-[16px] font-semibold text-pine-deep shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-clay-deep hover:text-cream hover:shadow-xl active:translate-y-0 sm:w-auto"
                   >
                     <Icon name="calendar" className="h-5 w-5" />
                     Programează o vizită
                   </Link>
                   <Link
                     href="/locatii"
-                    className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-7 py-3.5 text-[16px] font-semibold text-pine transition-colors hover:bg-pine hover:text-white"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-pine px-7 py-4 text-[16px] font-semibold text-pine shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-pine hover:text-cream hover:shadow-lg active:translate-y-0 sm:w-auto"
                   >
                     Vezi cele 4 locații
                     <Icon name="arrow" className="h-4 w-4" />
