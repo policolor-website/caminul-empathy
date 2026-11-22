@@ -199,7 +199,7 @@ export default function HomePage() {
                     alt="Căminul Empathy din Domnești, Ilfov"
                     width={800}
                     height={560}
-                    sizes="(min-width: 1024px) 41vw, calc(100vw - 2.5rem)"
+                    sizes="(min-width: 1024px) 620px, calc(100vw - 2.5rem)"
                     className="h-auto w-full object-cover"
                   />
                 </div>
