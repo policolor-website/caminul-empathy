@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { SITE } from "@/lib/content";
 import Icon from "./Icons";
 
@@ -69,30 +70,58 @@ export default function CallButton() {
     }
   };
 
+  const trackVisit = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "visit_click",
+      placement: "bottom_nav_bar",
+    });
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "visit_click", {
+        event_category: "contact",
+        event_label: "bottom_nav_bar",
+      });
+    }
+  };
+
+  const btnBase =
+    "flex items-center justify-center gap-1.5 rounded-lg px-2 py-3 text-[13px] font-semibold transition-all duration-200 active:scale-[0.97]";
+
   return (
-    <div className="fixed inset-x-4 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-50 md:hidden">
-      <div className="flex gap-2.5 rounded-[1.4rem] border border-white/10 bg-pine-deep/90 p-2 shadow-[0_18px_45px_rgba(7,23,55,0.45)] backdrop-blur-xl">
+    <nav
+      aria-label="Acțiuni rapide"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-honey/25 bg-pine-deep/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl lg:hidden"
+    >
+      <div className="grid grid-cols-3 gap-2 px-3 py-2.5">
+        <a
+          href={SITE.phoneHref}
+          onClick={trackPhone}
+          aria-label={`Sună acum la ${SITE.phone}`}
+          className={`${btnBase} bg-pine text-cream shadow-[inset_0_0_0_1.5px_rgba(217,196,143,0.9)]`}
+        >
+          <Icon name="phone" className="h-[18px] w-[18px]" />
+          Sună
+        </a>
         <a
           href={SITE.whatsapp}
           target="_blank"
           rel="noopener"
           onClick={trackWhatsApp}
           aria-label="Scrie-ne pe WhatsApp"
-          className="flex flex-1 items-center justify-center gap-2 rounded-[1rem] bg-[#25D366] px-4 py-3.5 text-[15px] font-bold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:bg-[#1fb856] active:scale-[0.97]"
+          className={`${btnBase} bg-[#25D366] text-[#07301a] hover:bg-[#1fb856]`}
         >
-          <WhatsAppIcon className="h-5 w-5" />
+          <WhatsAppIcon className="h-[18px] w-[18px]" />
           WhatsApp
         </a>
-        <a
-          href={SITE.phoneHref}
-          onClick={trackPhone}
-          aria-label={`Sună acum la ${SITE.phone}`}
-          className="flex flex-1 items-center justify-center gap-2 rounded-[1rem] bg-green-600 px-4 py-3.5 text-[15px] font-bold text-white shadow-lg shadow-green-600/30 transition-all duration-200 hover:bg-green-500 active:scale-[0.97]"
+        <Link
+          href="/contact"
+          onClick={trackVisit}
+          className={`${btnBase} border border-honey/70 text-honey hover:bg-honey/10`}
         >
-          <Icon name="phone" className="h-5 w-5" />
-          Sună acum
-        </a>
+          <Icon name="calendar" className="h-[18px] w-[18px]" />
+          Vizită
+        </Link>
       </div>
-    </div>
+    </nav>
   );
 }
