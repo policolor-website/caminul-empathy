@@ -223,9 +223,8 @@ export default function Header() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-expanded={menuOpen}
               aria-label="Meniu"
-              className="lg:hidden flex h-10 items-center gap-2 rounded-full border border-cream/25 px-4 text-cream"
+              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream"
             >
-              <span className="text-[13px] font-semibold uppercase tracking-wider">Meniu</span>
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                 {menuOpen ? (
                   <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
