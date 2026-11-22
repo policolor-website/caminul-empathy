@@ -561,17 +561,7 @@ export default function HomePage() {
                 <div className="mt-6 space-y-3">
                   <a href={SITE.phoneHref} className="flex items-center gap-3 rounded-xl bg-cream/10 px-4 py-3 transition-colors hover:bg-cream/20">
                     <Icon name="phone" className="h-5 w-5 shrink-0 text-honey" />
-                    <span>
-                      <span className="block font-semibold">{SITE.phone}</span>
-                      <span className="block text-xs text-cream/60">{SITE.phoneName}</span>
-                    </span>
-                  </a>
-                  <a href={SITE.phone2Href} className="flex items-center gap-3 rounded-xl bg-cream/10 px-4 py-3 transition-colors hover:bg-cream/20">
-                    <Icon name="phone" className="h-5 w-5 shrink-0 text-honey" />
-                    <span>
-                      <span className="block font-semibold">{SITE.phone2}</span>
-                      <span className="block text-xs text-cream/60">{SITE.phone2Name}</span>
-                    </span>
+                    <span className="font-semibold">{SITE.phone}</span>
                   </a>
                   <a href={SITE.whatsapp} target="_blank" rel="noopener" className="flex items-center gap-3 rounded-xl bg-cream/10 px-4 py-3 transition-colors hover:bg-cream/20">
                     <Icon name="users" className="h-5 w-5 shrink-0 text-honey" />
@@ -625,10 +615,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep transition-colors hover:bg-cream">
-                    <Icon name="phone" className="h-5 w-5" /> {SITE.phone} — {SITE.phoneName}
-                  </a>
-                  <a href={SITE.phone2Href} className="inline-flex items-center gap-2 rounded-full border-2 border-cream/40 px-7 py-3.5 font-semibold text-cream transition-colors hover:bg-cream hover:text-pine-deep">
-                    {SITE.phone2} — {SITE.phone2Name}
+                    <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
                   </a>
                 </div>
               </Reveal>

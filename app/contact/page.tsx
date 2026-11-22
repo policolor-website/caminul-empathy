@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Contact — Căminul Empathy, Domnești & Bragadiru",
   alternates: { canonical: "/contact" },
   description:
-    "Contact Căminul Empathy: telefon 0786 300 500 / 0790 884 422. Patru cămine de bătrâni în Ilfov, lângă București — Domnești și Bragadiru. Vizite zilnice, fără programare.",
+    "Contact Căminul Empathy: telefon 0756 069 681. Patru cămine de bătrâni în Ilfov, lângă București — Domnești și Bragadiru. Vizite zilnice, fără programare.",
 };
 
 export default function ContactPage() {
@@ -43,7 +43,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "phone", t: "Telefon", main: SITE.phone, sub: `${SITE.phoneName} · ${SITE.phone2} (${SITE.phone2Name})`, href: SITE.phoneHref },
+              { icon: "phone", t: "Telefon", main: SITE.phone, sub: "Non-stop, 7 zile", href: SITE.phoneHref },
               { icon: "users", t: "WhatsApp", main: "Scrie-ne pe WhatsApp", sub: "Răspundem rapid", href: SITE.whatsapp },
               { icon: "pin", t: "E-mail", main: SITE.email, sub: SITE.email2, href: `mailto:${SITE.email}` },
               { icon: "clock", t: "Vizite", main: "Luni–Duminică", sub: "Fără programare", href: null },
@@ -106,12 +106,8 @@ export default function ContactPage() {
                           <Icon name="arrow" className="h-3.5 w-3.5" />
                         </a>
                         <div className="mt-2 text-sm font-medium">
-                          <a href={SITE.phone2Href} className="text-clay hover:text-clay-deep">
-                            {SITE.phone2} — {SITE.phone2Name}
-                          </a>
-                          <span className="mx-2 text-sand">·</span>
                           <a href={SITE.phoneHref} className="text-clay hover:text-clay-deep">
-                            {SITE.phone} — {SITE.phoneName}
+                            {SITE.phone}
                           </a>
                         </div>
                       </div>

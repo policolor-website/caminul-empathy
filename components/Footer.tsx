@@ -89,13 +89,6 @@ export default function Footer() {
                 <a href={SITE.phoneHref} className="font-semibold text-cream hover:text-honey">
                   {SITE.phone}
                 </a>
-                <div className="text-cream/60 text-sm">{SITE.phoneName}</div>
-              </li>
-              <li>
-                <a href={SITE.phone2Href} className="font-semibold text-cream hover:text-honey">
-                  {SITE.phone2}
-                </a>
-                <div className="text-cream/60 text-sm">{SITE.phone2Name}</div>
               </li>
               <li>
                 <a href={`mailto:${SITE.email}`} className="text-cream/80 hover:text-honey break-all">
