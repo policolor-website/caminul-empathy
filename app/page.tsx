@@ -48,7 +48,7 @@ export default function HomePage() {
               <Reveal>
                 <div className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
                   <Icon name="pin" className="h-4 w-4" />
-                  4 cămine în Ilfov · din {SITE.since}
+                  4 centre în Ilfov · din {SITE.since}
                 </div>
               </Reveal>
               <Reveal delay={80}>
