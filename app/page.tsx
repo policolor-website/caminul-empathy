@@ -45,26 +45,26 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-12 pb-16 md:pt-20 md:pb-24">
           <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
-              <Reveal>
+              <div className="anim-in">
                 <div className="inline-flex items-center gap-2 rounded-full bg-pine-mist px-4 py-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-pine">
                   <Icon name="pin" className="h-4 w-4" />
                   4 centre în Ilfov · din {SITE.since}
                 </div>
-              </Reveal>
-              <Reveal delay={80}>
+              </div>
+              <div className="anim-in" style={{ animationDelay: "80ms" }}>
                 <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-pine-deep">
                   Locul în care{" "}
                   <em className="not-italic text-clay">vârsta se trăiește frumos</em>
                 </h1>
-              </Reveal>
-              <Reveal delay={160}>
+              </div>
+              <div className="anim-in" style={{ animationDelay: "160ms" }}>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                   Căminele de bătrâni Empathy: îngrijire medicală 24/7, medic geriatru și o echipă care tratează
                   fiecare rezident ca pe un membru al familiei. La 15–20 de minute
                   de capitală, în Domnești și Bragadiru; patru centre de bătrâni pentru familiile din București și Ilfov.
                 </p>
-              </Reveal>
-              <Reveal delay={240}>
+              </div>
+              <div className="anim-in" style={{ animationDelay: "240ms" }}>
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                   <Link href="/contact" className="lx-btn w-full sm:w-auto">
                     <Icon name="calendar" className="h-5 w-5" />
@@ -75,8 +75,8 @@ export default function HomePage() {
                     <Icon name="arrow" className="h-4 w-4" />
                   </Link>
                 </div>
-              </Reveal>
-              <Reveal delay={320}>
+              </div>
+              <div className="anim-in" style={{ animationDelay: "320ms" }}>
                 <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-[15px] text-ink-soft">
                   <span className="inline-flex items-center gap-2">
                     <Icon name="check" className="h-4 w-4 text-pine" /> Îngrijire medicală non-stop
@@ -88,10 +88,10 @@ export default function HomePage() {
                     <Icon name="check" className="h-4 w-4 text-pine" /> Internare chiar în aceeași zi
                   </span>
                 </div>
-              </Reveal>
+              </div>
             </div>
 
-            <Reveal delay={200} className="relative">
+            <div className="anim-in relative" style={{ animationDelay: "200ms" }}>
               <div className="relative">
                 <div className="relative aspect-[4/3.2] overflow-hidden rounded-[2.5rem] rounded-tr-[6rem] shadow-2xl">
                   <Image
@@ -118,7 +118,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>
