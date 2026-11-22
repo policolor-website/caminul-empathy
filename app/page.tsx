@@ -172,11 +172,6 @@ export default function HomePage() {
               </div>
             </Reveal>
             <div>
-              <SectionHeading
-                align="left"
-                eyebrow="Inclus în tarif"
-                title="Un tarif clar, cu totul inclus"
-              />
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {INCLUDED.slice(8).map((item, i) => (
                   <Reveal key={item} delay={i * 40}>
