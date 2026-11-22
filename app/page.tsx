@@ -160,11 +160,11 @@ export default function HomePage() {
                   necesare. Evaluare gratuită, contract transparent, zero costuri ascunse.
                 </p>
                 <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-                  <Link href="/tarife" className="lx-btn-gold w-full sm:w-auto">
+                  <Link href="/tarife" className="lx-btn w-full sm:w-auto">
                     <Icon name="arrow" className="h-5 w-5" />
                     Detalii tarife
                   </Link>
-                  <a href={SITE.phoneHref} className="lx-btn-ghost-light w-full sm:w-auto">
+                  <a href={SITE.phoneHref} className="lx-btn-ghost on-dark w-full sm:w-auto">
                     Cere o estimare
                     <Icon name="phone" className="h-5 w-5" />
                   </a>
