@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbNode, faqNode, graph, webpageNode } from "@/lib/jsonld";
 import { FAQS, SITE } from "@/lib/content";
 import RelatedLinks from "@/components/RelatedLinks";
+import Icon from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Întrebări frecvente — Cămin de bătrâni Empathy",
