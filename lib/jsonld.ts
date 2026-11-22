@@ -50,9 +50,7 @@ export function orgNode() {
 }
 
 export function locationNode(loc: (typeof LOCATIONS)[number]) {
-  const [opens, closes] = loc.visitHours.includes("08:00")
-    ? ["08:00", "22:00"]
-    : ["10:00", "18:00"];
+  const [opens, closes] = ["10:00", "18:00"];
   return {
     "@type": ["NursingHome", "MedicalOrganization", "LocalBusiness"],
     "@id": `${BASE}/locatii/${loc.slug}#locatie`,

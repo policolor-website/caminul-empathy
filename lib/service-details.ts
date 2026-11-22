@@ -50,7 +50,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     ],
     faqs: [
       { q: "Cât timp poate sta un rezident la cămin?", a: "Pe termen nelimitat. Mulți rezidenți stau ani de zile — căminul devine casa lor. Contractul se reînnoiește periodic și planul de îngrijire se ajustează la nevoile în evoluție." },
-      { q: "Pot vizita rezidentul oricând?", a: "Da. Vizitele sunt zilnice, fără programare. La locațiile din Domnești programul este 10:00–13:00 și 14:00–18:00, la Clinceni 08:00–22:00." },
+      { q: "Pot vizita rezidentul oricând?", a: "Da. Vizitele sunt zilnice, fără programare. La toate locațiile programul este 10:00–18:00." },
       { q: "Ce se întâmplă dacă starea de sănătate se modifică?", a: "Planul de îngrijire se revizuiește și se ajustează. Dacă apar nevoi noi (de exemplu imobilizare sau nevoi de îngrijire complexe), echipa medicală actualizează abordarea și familia este informată." },
       { q: "Este căminul de bătrâni potrivit și pentru persoane sănătoase?", a: "Da. Avem rezidenți autonomi care aleg căminul pentru siguranță, companie și activități — nu doar pentru îngrijire medicală." },
     ],

@@ -97,7 +97,7 @@ export const LOCATIONS = [
       "Program terapeutic și kineto personalizat",
       "Zonă liniștită în Ilfov, aproape de Capitală",
     ],
-    visitHours: "Luni–Duminică, 10:00–13:00 și 14:00–18:00",
+    visitHours: "Luni–Duminică, 10:00–18:00",
     facts: [
       { title: "Locație accesibilă", text: "La 15–20 de minute de București, ideal pentru familiile din sectoarele 4, 5 și 6." },
       { title: "Îngrijire medicală specializată", text: "Medici geriatri, asistente, infirmiere și kinetoterapeuți. Experiență cu Alzheimer, Parkinson, diabet și recuperare post-AVC." },
@@ -123,7 +123,7 @@ export const LOCATIONS = [
       "Program terapeutic și kineto personalizat",
       "Tarife accesibile cu servicii complete",
     ],
-    visitHours: "Luni–Duminică, 10:00–13:00 și 14:00–18:00",
+    visitHours: "Luni–Duminică, 10:00–18:00",
     facts: [
       { title: "Locație accesibilă", text: "La 15–20 de minute de București, în Domnești, Ilfov — liniște și aer curat, aproape de familie." },
       { title: "Îngrijire medicală specializată", text: "Echipă completă: medici geriatri, asistente, infirmiere și kinetoterapeuți, cu colaborări la spitale din București." },
@@ -150,7 +150,7 @@ export const LOCATIONS = [
       "Parcare gratuită pentru vizitatori",
       "Transport organizat pentru vizite medicale",
     ],
-    visitHours: "Luni–Duminică, 08:00–22:00",
+    visitHours: "Luni–Duminică, 10:00–18:00",
     facts: [
       { title: "Locație strategică", text: "Pe Șoseaua Clinceni, în zona de sud a Bucureștiului — liniște și spații verzi, la 15–20 de minute de oraș." },
       { title: "Facilități premium", text: "Clădire complet renovată în 2024: camere moderne, băi adaptate, mobilier ergonomic." },
@@ -186,7 +186,7 @@ export const LOCATIONS = [
       "Program terapeutic și kineto personalizat",
       "Tarife accesibile cu servicii complete",
     ],
-    visitHours: "Luni–Duminică, 10:00–13:00 și 14:00–18:00",
+    visitHours: "Luni–Duminică, 10:00–18:00",
     facts: [
       { title: "Locație accesibilă", text: "Pe Str. Fortunei nr. 11, în Domnești — la 15–20 de minute de București, aproape de familie." },
       { title: "Îngrijire medicală specializată", text: "Echipă completă: medici geriatri, asistente, infirmiere și kinetoterapeuți, cu colaborări la spitale din București." },
@@ -320,7 +320,7 @@ export const FAQS = [
   },
   {
     q: "Care este programul de vizită?",
-    a: "La locațiile din Domnești (Cetinei și Orhideelor): Luni–Duminică, 10:00–13:00 și 14:00–18:00. La Clinceni: Luni–Duminică, 08:00–22:00. Vizitele nu necesită programare — încurajăm familia să vină cât de des poate.",
+    a: "La toate locațiile: Luni–Duminică, 10:00–18:00. Vizitele nu necesită programare — încurajăm familia să vină cât de des poate.",
   },
   {
     q: "Cine se ocupă medical de rezidenți?",
