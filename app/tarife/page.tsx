@@ -18,8 +18,6 @@ export const metadata: Metadata = {
 const FACTORS = [
   { t: "Gradul de dependență", d: "Rezident autonom, parțial dependent, dependent total sau imobilizat — fiecare nivel are un tarif propriu." },
   { t: "Starea de sănătate", d: "Afecțiuni neurologice (Alzheimer, Parkinson), recuperare post-AVC sau îngrijiri complexe pot influența tariful." },
-  { t: "Tipul de cameră", d: "Cameră single sau cu mai multe locuri, în funcție de disponibilitate în fiecare centru." },
-  { t: "Durata șederii", d: "Șederi pe termen lung sau scurt — tariful se stabilește transparent, la evaluare." },
 ];
 
 export default function TarifePage() {
