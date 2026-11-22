@@ -43,7 +43,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "phone", t: "Telefon", main: SITE.phone, sub: "Non-stop, 7 zile", subHref: "tel:+40720160612", subLabel: "Informații și internări, luni–duminică, 08:00–21:00", href: SITE.phoneHref },
+              { icon: "phone", t: "Telefon", main: SITE.phone, sub: "Non-stop, 7 zile", href: SITE.phoneHref },
               { icon: "users", t: "WhatsApp", main: "Scrie-ne pe WhatsApp", sub: "Răspundem rapid", href: SITE.whatsapp },
               { icon: "pin", t: "E-mail", main: SITE.email, sub: SITE.email2, href: `mailto:${SITE.email}` },
               { icon: "clock", t: "Vizite", main: "Luni–Duminică", sub: "Fără programare", href: null },
@@ -65,13 +65,7 @@ export default function ContactPage() {
                   ) : (
                     <div className="mt-2 font-semibold text-pine-deep">{c.main}</div>
                   )}
-                  {"subHref" in c && c.subHref ? (
-                    <a href={c.subHref} className="mt-1 block text-sm text-ink-soft underline decoration-honey decoration-2 underline-offset-2 hover:text-clay">
-                      {c.subLabel}
-                    </a>
-                  ) : (
-                    <div className="mt-1 text-sm text-ink-soft">{c.sub}</div>
-                  )}
+                  <div className="mt-1 text-sm text-ink-soft">{c.sub}</div>
                 </div>
               </Reveal>
             ))}
