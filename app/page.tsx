@@ -68,14 +68,14 @@ export default function HomePage() {
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                   <Link
                     href="/contact"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-honey px-7 py-4 text-[16px] font-semibold text-pine-deep shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-clay-deep hover:text-cream hover:shadow-xl active:translate-y-0 sm:w-auto"
+                    className="btn-shine inline-flex w-full items-center justify-center gap-2 rounded-full bg-honey px-7 py-4 text-[16px] font-semibold text-pine-deep shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-clay-deep hover:text-cream hover:shadow-[0_18px_40px_-10px_rgba(132,99,39,0.55)] active:translate-y-0 sm:w-auto"
                   >
                     <Icon name="calendar" className="h-5 w-5" />
                     Programează o vizită
                   </Link>
                   <Link
                     href="/locatii"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-pine px-7 py-4 text-[16px] font-semibold text-pine shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-pine hover:text-cream hover:shadow-lg active:translate-y-0 sm:w-auto"
+                    className="btn-shine inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-pine bg-pine/5 px-7 py-4 text-[16px] font-semibold text-pine shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-pine-deep hover:bg-pine hover:text-cream hover:shadow-[0_18px_40px_-10px_rgba(11,31,75,0.5)] active:translate-y-0 sm:w-auto"
                   >
                     Vezi cele 4 locații
                     <Icon name="arrow" className="h-4 w-4" />
