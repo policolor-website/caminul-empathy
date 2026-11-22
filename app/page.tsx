@@ -71,7 +71,7 @@ export default function HomePage() {
                     className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 text-[16px] font-semibold text-pine-deep shadow-md transition-all hover:bg-clay-deep hover:text-cream hover:shadow-lg"
                   >
                     <Icon name="calendar" className="h-5 w-5" />
-                    Programează o vizită gratuită
+                    Programează o vizită
                   </Link>
                   <Link
                     href="/locatii"
