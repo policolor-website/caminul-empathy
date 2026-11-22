@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Cămin de bătrâni ieftin — tarife de la 4.500 lei/lună | Empathy",
   alternates: { canonical: "/tarife" },
   description:
-    "Tarife cămin de bătrâni Empathy: 4.500–7.000 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.",
+    "Tarife cămin de bătrâni Empathy: de la 4.500 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.",
 };
 
 const FACTORS = [
@@ -28,7 +28,7 @@ export default function TarifePage() {
       <JsonLd
         data={graph(
           orgNode(),
-          webpageNode("/tarife", "Tarife cămin de bătrâni — Empathy", "Tarife cămin de bătrâni Empathy: 4.500–7.000 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.", "OfferCatalog"),
+          webpageNode("/tarife", "Tarife cămin de bătrâni — Empathy", "Tarife cămin de bătrâni Empathy: de la 4.500 lei/lună în funcție de gradul de dependență. Totul inclus: cazare, masă, îngrijire medicală 24/7, kinetoterapie.", "OfferCatalog"),
           breadcrumbNode([{ name: "Acasă", path: "/" }, { name: "Tarife", path: "/tarife" }])
         )}
       />
@@ -55,7 +55,9 @@ export default function TarifePage() {
                   Tarif lunar
                 </div>
                 <div className="mt-3 font-display text-5xl font-semibold text-pine-deep">
-                  {SITE.priceMin}–{SITE.priceMax} lei
+                  de la {SITE.priceMin}
+                  <span className="text-2xl"> lei</span>
+                  <span className="text-lg font-normal text-ink-soft">/lună</span>
                 </div>
                 <p className="mt-4 text-ink-soft leading-relaxed">
                   Prețul final depinde de gradul de dependență și serviciile necesare.

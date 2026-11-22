@@ -300,7 +300,7 @@ export const FIT = {
 export const FAQS = [
   {
     q: "Cât costă un loc la Căminul Empathy?",
-    a: `Tarifele sunt între ${SITE.priceMin} și ${SITE.priceMax} lei/lună, în funcție de gradul de dependență și serviciile necesare. Prețul include cazare, 3 mese + 2 gustări, îngrijire medicală 24/7, kinetoterapie, activități, spălătorie și utilități. La evaluarea gratuită primiți un tarif exact.`,
+    a: `Tarifele pornesc de la ${SITE.priceMin} lei/lună, în funcție de gradul de dependență și serviciile necesare. Prețul include cazare, 3 mese + 2 gustări, îngrijire medicală 24/7, kinetoterapie, activități, spălătorie și utilități. La evaluarea gratuită primiți un tarif exact.`,
   },
   {
     q: "Ce este inclus în tarif?",

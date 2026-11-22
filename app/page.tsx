@@ -151,7 +151,7 @@ export default function HomePage() {
                   Tarife 2026
                 </div>
                 <div className="mt-4 font-display text-4xl md:text-5xl font-semibold">
-                  {SITE.priceMin}–{SITE.priceMax}
+                  de la {SITE.priceMin}
                   <span className="text-2xl"> lei</span>
                   <span className="text-lg font-normal text-cream/70">/lună</span>
                 </div>
