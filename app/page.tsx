@@ -470,13 +470,14 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={300} className="mt-12 flex flex-wrap justify-center gap-4">
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep transition-colors hover:bg-clay-deep hover:text-cream">
+          <Reveal delay={300} className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+            <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
               <Icon name="phone" className="h-5 w-5" />
               Sună acum: {SITE.phone}
             </a>
-            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-7 py-3.5 font-semibold text-pine hover:bg-pine hover:text-white">
+            <Link href="/contact" className="lx-btn-ghost w-full sm:w-auto">
               Scrie-ne un mesaj
+              <Icon name="arrow" className="h-5 w-5" />
             </Link>
           </Reveal>
         </div>
