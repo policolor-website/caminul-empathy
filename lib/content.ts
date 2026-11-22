@@ -177,7 +177,7 @@ export const LOCATIONS = [
       "/img/fortunei-11.webp",
     ],
     blurb:
-      "Cel mai nou cămin Empathy din Domnești — îngrijire medicală profesională 24/7, camere confortabile și același acces rapid din București.",
+      "Cel mai nou Centru Empathy din Domnești — îngrijire medicală profesională 24/7, camere confortabile și același acces rapid din București.",
     highlights: [
       "Acces rapid din București (15–20 minute)",
       "Al treilea centru Empathy din Domnești",
