@@ -31,7 +31,7 @@ export default function ContactPage() {
             Contact
           </div>
           <h1 className="mt-5 font-display text-4xl md:text-5xl font-semibold text-cream">
-            Vorbiți cu noi — răspundem în 24h
+            Vorbiți cu noi, răspundem imediat
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
             Contactați-ne pentru întrebări despre căminul de bătrâni, vizite sau evaluarea gratuită — sunați sau lăsați un mesaj.
