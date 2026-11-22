@@ -134,12 +134,12 @@ export default function Header() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/img/logo.webp"
-              width="112"
-              height="112"
+              src="/img/logo-empathy.webp"
+              width="671"
+              height="372"
               alt="Căminul Empathy"
-              className={`object-contain transition-all duration-300 ${
-                compact ? "h-10 w-10 lg:h-12 lg:w-12" : "h-14 w-14 lg:h-28 lg:w-28"
+              className={`w-auto object-contain transition-all duration-300 ${
+                compact ? "h-9 lg:h-11" : "h-12 lg:h-16"
               }`}
             />
             <span

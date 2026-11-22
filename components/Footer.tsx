@@ -11,11 +11,11 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/img/logo.webp"
-                width="44"
-                height="44"
+                src="/img/logo-empathy.webp"
+                width="671"
+                height="372"
                 alt="Căminul Empathy"
-                className="h-11 w-11 rounded-xl bg-cream/10 object-contain"
+                className="h-9 w-auto object-contain"
               />
               <div className="leading-tight">
                 <div className="font-display text-xl font-semibold">Empathy</div>

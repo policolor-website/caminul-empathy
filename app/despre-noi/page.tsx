@@ -94,10 +94,10 @@ export default function DespreNoiPage() {
             <Reveal delay={150} variant="zoom">
               <div className="flex items-center justify-center overflow-hidden rounded-[2rem] bg-cream px-10 py-16 shadow-xl">
                 <Image
-                  src="/img/logo.webp"
+                  src="/img/logo-empathy.webp"
                   alt="Logo Căminul Empathy"
-                  width={500}
-                  height={500}
+                  width={671}
+                  height={372}
                   className="h-auto w-full max-w-xs object-contain"
                 />
               </div>

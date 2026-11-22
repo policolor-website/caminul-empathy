@@ -21,7 +21,7 @@ export function orgNode() {
     legalName: COMPANY.legalName,
     alternateName: "Empathy",
     url: `${BASE}/`,
-    logo: `${BASE}/img/logo.webp`,
+    logo: `${BASE}/img/logo-empathy.webp`,
     telephone: `+40${SITE.phone.replace(/\s/g, "")}`,
     email: SITE.email,
     vatID: `RO${COMPANY.cui}`,
