@@ -5,7 +5,7 @@ import { LOCATIONS, SITE } from "@/lib/content";
 
 // Web3Forms access key — public by design (client-side forms only on free plan),
 // protected by the botcheck honeypot and Web3Forms rate limiting.
-const WEB3FORMS_KEY = "0df86fb2-037c-46ec-bc30-6bf30348211a";
+const WEB3FORMS_KEY = "68a357df-54d6-490e-856b-4ac617fc3181";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
