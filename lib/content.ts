@@ -111,7 +111,7 @@ export const LOCATIONS = [
     short: "Orhideelor",
     badge: "Curte și grădină amenajată",
     address: "Str. Orhideelor nr. 4, Domnești, Ilfov",
-    image: "/img/g9.webp",
+    image: "/img/g16.webp",
     coords: { lat: 44.3906013, lng: 25.8981553 },
     blurb:
       "Îngrijire medicală profesională 24/7 într-o curte spațioasă cu grădină amenajată. Facilități moderne, personal dedicat și acces rapid din București.",
