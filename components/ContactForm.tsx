@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { LOCATIONS, SITE } from "@/lib/content";
 
+// Web3Forms access key — public by design (client-side forms only on free plan),
+// protected by the botcheck honeypot and Web3Forms rate limiting.
+const WEB3FORMS_KEY = "0df86fb2-037c-46ec-bc30-6bf30348211a";
+
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function ContactForm() {
@@ -13,16 +17,26 @@ export default function ContactForm() {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
+
+    // Strip technical fields and map to Web3Forms payload
+    const nume = String(fd.get("nume") || "");
+    fd.delete("t");
+    fd.delete("website");
+    fd.delete("gdpr");
+    fd.append("access_key", WEB3FORMS_KEY);
+    fd.append("subject", `Formular contact — ${nume}`);
+    fd.append("from_name", "Căminul Empathy — Website");
+
     setStatus("sending");
     setErrorMsg("");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: fd,
         headers: { Accept: "application/json" },
       });
-      const data = (await res.json()) as { ok?: boolean; message?: string };
-      if (res.ok && data.ok) {
+      const data = (await res.json()) as { success?: boolean; message?: string };
+      if (res.ok && data.success) {
         setStatus("sent");
         form.reset();
       } else {
@@ -55,7 +69,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-4" noValidate>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
-      <input type="hidden" name="t" value={typeof window !== "undefined" ? Date.now() : 0} readOnly />
+      <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} aria-hidden="true" />
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
