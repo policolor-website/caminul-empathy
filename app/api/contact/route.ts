@@ -55,15 +55,33 @@ export async function POST(req: Request) {
     mesaj: mesaj || null,
   };
 
-  // Delivery: CONTACT_WEBHOOK (e.g. Make/Zapier/n8n) takes priority;
-  // otherwise append to messages.log in the project root.
+  // Delivery priority:
+  // 1) CONTACT_WEBHOOK (e.g. Make/Zapier/n8n) — receives raw JSON record
+  // 2) WEB3FORMS_KEY — emails the submission via Web3Forms to the configured inbox
+  // 3) fallback: append to messages.log in the project root
   const webhook = process.env.CONTACT_WEBHOOK;
+  const web3formsKey = process.env.WEB3FORMS_KEY;
   try {
     if (webhook) {
       await fetch(webhook, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(record),
+      });
+    } else if (web3formsKey) {
+      const fields = Object.entries({ ...record, email: email || undefined })
+        .filter(([, v]) => v != null && v !== "")
+        .map(([name, value]) => ({ name, value: String(value) }));
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: web3formsKey,
+          subject: `Formular contact — ${nume} (${telefon})`,
+          from_name: "Căminul Empathy — Website",
+          replyto: email || undefined,
+          fields,
+        }),
       });
     } else {
       await appendFile(
