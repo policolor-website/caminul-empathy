@@ -521,10 +521,6 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 rounded-xl bg-white/70 p-4 text-sm text-ink-soft">
-                  Dacă situația necesită alt tip de îngrijire, vă spunem sincer și vă
-                  orientăm către soluția potrivită.
-                </p>
               </div>
             </Reveal>
           </div>
@@ -560,13 +556,6 @@ export default function HomePage() {
                     <Icon name="users" className="h-5 w-5 shrink-0 text-honey" />
                     <span className="font-semibold">WhatsApp</span>
                   </a>
-                </div>
-                <div className="mt-6 flex items-start gap-3 rounded-xl border border-cream/15 p-4 text-sm text-cream/70">
-                  <Icon name="clock" className="mt-0.5 h-4 w-4 shrink-0 text-honey" />
-                  <span>
-                    Vizite zilnice, fără programare.<br />
-                    Domnești 10–13 &amp; 14–18 · Clinceni 08–22.
-                  </span>
                 </div>
               </aside>
             </Reveal>
