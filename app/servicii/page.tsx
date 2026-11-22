@@ -99,12 +99,13 @@ export default function ServiciiPage() {
             title="Nu sunteți sigur ce serviciu se potrivește?"
             lead="Spuneți-ne despre situația părintelui sau bunicului — vă spunem sincer ce îngrijire îi trebuie și vă dăm un tarif exact."
           />
-          <Reveal delay={150} className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
+          <Reveal delay={150} className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+            <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
               <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
             </a>
-            <a href="/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-8 py-4 font-semibold text-pine hover:bg-pine hover:text-white">
+            <a href="/contact" className="lx-btn-ghost w-full sm:w-auto">
               Trimite mesaj
+              <Icon name="arrow" className="h-5 w-5" />
             </a>
           </Reveal>
         </div>

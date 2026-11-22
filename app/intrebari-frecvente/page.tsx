@@ -70,15 +70,16 @@ export default function IntrebariPage() {
             <p className="mt-3 max-w-2xl leading-relaxed text-cream/75">
               Sunați-ne sau scrieți-ne — răspundem la orice întrebare, cu sinceritate, înainte să luați o decizie.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href={SITE.phoneHref} className="rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream transition-colors">
-                {SITE.phone}
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
+                <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
               </a>
-              <a href={SITE.whatsapp} target="_blank" rel="noopener" className="rounded-full border border-cream/30 px-6 py-3 font-semibold text-cream hover:bg-cream/10 transition-colors">
-                WhatsApp
+              <a href={SITE.whatsapp} target="_blank" rel="noopener" className="lx-btn-ghost on-dark w-full sm:w-auto">
+                <Icon name="users" className="h-5 w-5" /> WhatsApp
               </a>
-              <Link href="/contact" className="rounded-full border border-cream/30 px-6 py-3 font-semibold text-cream hover:bg-cream/10 transition-colors">
+              <Link href="/contact" className="lx-btn-ghost on-dark w-full sm:w-auto">
                 Pagina de contact
+                <Icon name="arrow" className="h-5 w-5" />
               </Link>
             </div>
           </div>

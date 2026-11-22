@@ -595,8 +595,8 @@ export default function HomePage() {
                   Vino să cunoști căminul, echipa și atmosfera. Răspundem în maximum
                   24 de ore, iar internarea se poate face chiar în aceeași zi.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep transition-colors hover:bg-cream">
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                  <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
                     <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
                   </a>
                 </div>

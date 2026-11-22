@@ -88,12 +88,13 @@ export default async function ServicePage({
               {svc.title}
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-cream/80">{svc.text}</p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-7 py-3.5 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream transition-colors">
+            <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
                 <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
               </a>
-              <Link href="/contact" className="inline-flex items-center gap-2 rounded-full border border-cream/30 px-7 py-3.5 font-semibold text-cream hover:bg-cream/10 transition-colors">
+              <Link href="/contact" className="lx-btn-ghost on-dark w-full sm:w-auto">
                 Cere evaluare gratuită
+                <Icon name="arrow" className="h-5 w-5" />
               </Link>
             </div>
           </div>
@@ -242,12 +243,13 @@ export default async function ServicePage({
           <p className="mt-4 text-lg text-cream/75">
             Evaluare gratuită, tarif exact și internare posibilă chiar în aceeași zi.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+            <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
               <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
             </a>
-            <Link href="/tarife" className="inline-flex items-center gap-2 rounded-full border border-cream/30 px-8 py-4 font-semibold text-cream hover:bg-cream/10">
+            <Link href="/tarife" className="lx-btn-ghost on-dark w-full sm:w-auto">
               Vezi tarifele
+              <Icon name="arrow" className="h-5 w-5" />
             </Link>
           </div>
         </div>

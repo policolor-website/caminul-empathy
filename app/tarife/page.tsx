@@ -76,12 +76,13 @@ export default function TarifePage() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-6 py-3 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
-                    <Icon name="phone" className="h-4 w-4" /> {SITE.phone}
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                  <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
+                    <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
                   </a>
-                  <Link href="/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-pine px-6 py-3 font-semibold text-pine hover:bg-pine hover:text-white">
+                  <Link href="/contact" className="lx-btn-ghost w-full sm:w-auto">
                     Cere estimare
+                    <Icon name="arrow" className="h-5 w-5" />
                   </Link>
                 </div>
               </div>
@@ -138,8 +139,8 @@ export default function TarifePage() {
             <p className="mt-4 text-lg text-ink-soft">
               Evaluarea medicală este gratuită și fără obligații. Răspundem în maximum 24 de ore.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a href={SITE.phoneHref} className="inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+              <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">
                 <Icon name="phone" className="h-5 w-5" /> {SITE.phone}
               </a>
             </div>

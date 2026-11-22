@@ -66,7 +66,7 @@ export default function GaleriePage() {
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-pine-deep">
             Fotografiile arată o parte — veniți să vedeți restul
           </h2>
-          <a href={SITE.phoneHref} className="mt-6 inline-flex items-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-pine-deep hover:bg-clay-deep hover:text-cream">
+          <a href={SITE.phoneHref} className="lx-btn mt-6 w-full sm:w-auto">
             <Icon name="phone" className="h-5 w-5" /> Programează vizită: {SITE.phone}
           </a>
         </div>
