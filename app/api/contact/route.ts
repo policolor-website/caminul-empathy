@@ -96,7 +96,7 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     ok: true,
-    message: "Mulțumim! Am primit cererea și vă contactăm în maximum 24 de ore.",
+    message: "Mulțumim! Am primit cererea. Răspundem imediat.",
   });
 }
 

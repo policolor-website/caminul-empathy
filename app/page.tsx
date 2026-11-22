@@ -222,7 +222,7 @@ export default function HomePage() {
                   { t: "Îngrijire personalizată", d: "Plan individual de îngrijire, adaptat nevoilor unice ale fiecărui rezident." },
                   { t: "Transparență totală", d: "Comunicare zilnică cu familia și tarife clare, fără surprize." },
                   { t: "Echipă medicală 24/7", d: "Medic geriatru, asistente, infirmiere și kinetoterapeuți." },
-                  { t: "Internare rapidă", d: "Răspuns în maximum 24h — internarea se poate face chiar în aceeași zi." },
+                  { t: "Internare rapidă", d: "Răspundem imediat — internarea se poate face chiar în aceeași zi." },
                 ].map((f, i) => (
                   <Reveal key={f.t} delay={i * 80}>
                     <div className="flex gap-4">
@@ -592,8 +592,8 @@ export default function HomePage() {
                   Vorbiți cu noi astăzi — vizita este gratuită
                 </h2>
                 <p className="mt-4 text-lg text-cream/75 leading-relaxed">
-                  Vino să cunoști căminul, echipa și atmosfera. Răspundem în maximum
-                  24 de ore, iar internarea se poate face chiar în aceeași zi.
+                  Vino să cunoști căminul, echipa și atmosfera. Răspundem imediat,
+                  iar internarea se poate face chiar în aceeași zi.
                 </p>
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                   <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">

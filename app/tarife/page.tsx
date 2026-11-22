@@ -137,7 +137,7 @@ export default function TarifePage() {
               Cereți un tarif exact pentru situația dumneavoastră
             </h2>
             <p className="mt-4 text-lg text-ink-soft">
-              Evaluarea medicală este gratuită și fără obligații. Răspundem în maximum 24 de ore.
+              Evaluarea medicală este gratuită și fără obligații. Răspundem imediat.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
               <a href={SITE.phoneHref} className="lx-btn w-full sm:w-auto">

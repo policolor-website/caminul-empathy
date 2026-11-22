@@ -59,7 +59,7 @@ export default function ContactForm() {
         </div>
         <h3 className="font-display text-xl font-semibold text-pine-deep">Mulțumim!</h3>
         <p className="mt-2 text-ink-soft">
-          Am primit mesajul. Vă contactăm în maximum 24 de ore. Pentru urgențe, sunați la{" "}
+          Am primit mesajul. Răspundem imediat. Pentru urgențe, sunați la{" "}
           <a href={SITE.phoneHref} className="font-semibold text-pine">{SITE.phone}</a>.
         </p>
       </div>

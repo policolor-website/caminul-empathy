@@ -316,7 +316,7 @@ export const FAQS = [
   },
   {
     q: "Cât de repede se poate face internarea?",
-    a: "Răspundem în maximum 24 de ore, iar internarea se poate face chiar în aceeași zi, după evaluarea medicală gratuită și semnarea contractului.",
+    a: "Răspundem imediat, iar internarea se poate face chiar în aceeași zi, după evaluarea medicală gratuită și semnarea contractului.",
   },
   {
     q: "Care este programul de vizită?",
