@@ -46,7 +46,7 @@ export default function ContactPage() {
               { icon: "phone", t: "Telefon", main: SITE.phone, sub: "Informații și internări, luni–duminică, 08:00–21:00", href: SITE.phoneHref },
               { icon: "users", t: "WhatsApp", main: "Scrie-ne pe WhatsApp", sub: "Răspundem rapid", href: SITE.whatsapp },
               { icon: "pin", t: "E-mail", main: SITE.email2, sub: "Răspuns în maximum 24 de ore", href: `mailto:${SITE.email2}` },
-              { icon: "clock", t: "Vizite", main: "Luni–Duminică", sub: "Fără programare", href: null },
+              { icon: "clock", t: "Vizite", main: "Luni–Duminică", sub: "Fără programare, între 10:00 – 18:00", href: null },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 80}>
                 <div data-glow className="h-full rounded-3xl border border-sand bg-white p-6 text-center">
