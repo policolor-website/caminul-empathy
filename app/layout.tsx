@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,14 +8,17 @@ import GlowTracker from "@/components/GlowTracker";
 import CallButton from "@/components/CallButton";
 import { SITE } from "@/lib/content";
 
-const fraunces = Fraunces({
+const fraunces = Cormorant_Garamond({
   variable: "--font-fraunces",
   subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const sourceSans = Source_Sans_3({
+const sourceSans = DM_Sans({
   variable: "--font-source-sans",
   subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
