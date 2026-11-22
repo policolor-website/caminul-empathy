@@ -92,7 +92,7 @@ export default function TarifePage() {
                 align="left"
                 title="De ce depinde tariful"
               />
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="mt-8 mx-auto grid max-w-3xl gap-4 sm:grid-cols-2">
                 {FACTORS.map((f, i) => (
                   <Reveal key={f.t} delay={i * 80}>
                     <div data-glow data-tilt className="h-full rounded-2xl border border-sand bg-white p-6">
