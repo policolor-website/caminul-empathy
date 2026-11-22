@@ -14,6 +14,8 @@ export default function LocationMap({ locations }: { locations: Loc[] }) {
     if (!ref.current) return;
     let map: LeafletMap | null = null;
     let cancelled = false;
+    let started = false;
+    let observer: IntersectionObserver | null = null;
 
     const load = async () => {
       if (!document.getElementById("leaflet-css")) {
@@ -71,9 +73,28 @@ export default function LocationMap({ locations }: { locations: Loc[] }) {
       });
     };
 
-    load().catch(() => {});
+    const start = () => {
+      if (started || cancelled) return;
+      started = true;
+      observer?.disconnect();
+      load().catch(() => {});
+    };
+
+    if ("IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) start();
+        },
+        { rootMargin: "200px" }
+      );
+      observer.observe(ref.current);
+    } else {
+      start();
+    }
+
     return () => {
       cancelled = true;
+      observer?.disconnect();
       map?.remove();
     };
   }, [locations]);
