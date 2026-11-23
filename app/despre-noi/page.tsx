@@ -55,7 +55,7 @@ export default function DespreNoiPage() {
             4 locații, o singură familie
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-cream/75">
-            De la 2019 oferim îngrijire cu empatie și profesionalism pentru seniori, în patru cămine de bătrâni moderne din Ilfov.
+            Din 2019 oferim îngrijire cu empatie și profesionalism pentru seniori, în patru cămine de bătrâni moderne din Ilfov.
           </p>
         </div>
       </section>
